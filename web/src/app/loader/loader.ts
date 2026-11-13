@@ -1,22 +1,30 @@
-import { Component, ElementRef, computed, inject, output, signal, viewChild } from '@angular/core';
+import { Component, DestroyRef, ElementRef, computed, inject, output, signal, viewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DataService } from '../data/data.service';
 
 /** Video de YouTube de la portada: pantalla de inicio de la final del Mundial 2015 (canal oficial de LoL Corea). */
 const VIDEO_ID = '-MBvUX8FWos';
 // youtube-nocookie: no deja cookies de seguimiento hasta que el usuario interactúa con el video.
+const YT_ORIGIN = 'https://www.youtube-nocookie.com';
+// Sin loop=1: repetir con la API (seekTo) evita que YouTube recargue y vuelva a mostrar sus controles.
 const VIDEO_URL =
-  `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}` +
+  `${YT_ORIGIN}/embed/${VIDEO_ID}?autoplay=1&mute=1` +
   '&controls=0&rel=0&playsinline=1&modestbranding=1&iv_load_policy=3&disablekb=1&enablejsapi=1';
+/** Imagen del propio video: tapa los controles que YouTube muestra unos segundos al arrancar. */
+const POSTER = `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
+/** Tiempo que YouTube deja visibles sus controles (⏮ ⏸ ⏭) tras empezar a reproducir. */
+const CONTROLS_MS = 3500;
 
 /** Portada: video de fondo y el botón para entrar. El botón se activa cuando los JSON ya cargaron. */
 @Component({
   selector: 'app-loader',
   template: `
     <section class="intro" aria-label="Portada">
-      <div class="video" aria-hidden="true">
+      <div class="video" aria-hidden="true" [style.background-image]="'url(' + poster + ')'">
         <iframe
           #yt
+          [class.on]="showVideo()"
+          (load)="listen()"
           [src]="src"
           title="Video de portada"
           tabindex="-1"
@@ -59,7 +67,13 @@ const VIDEO_URL =
       position: absolute;
       inset: 0;
       pointer-events: none;
+      background: center / cover no-repeat;
       iframe {
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        &.on {
+          opacity: 1;
+        }
         position: absolute;
         top: 50%;
         left: 50%;
@@ -155,22 +169,60 @@ export class LoaderComponent {
   // URL fija escrita en el código (no viene del usuario): segura para el iframe.
   protected readonly src = inject(DomSanitizer).bypassSecurityTrustResourceUrl(VIDEO_URL);
   protected readonly percent = computed(() => Math.round(this.data.progress() * 100));
+  protected readonly poster = POSTER;
   protected readonly muted = signal(true);
+  /** El iframe se muestra cuando YouTube ya ocultó sus controles; antes se ve la imagen del video. */
+  protected readonly showVideo = signal(false);
   private readonly yt = viewChild<ElementRef<HTMLIFrameElement>>('yt');
+  private revealTimer: ReturnType<typeof setTimeout> | undefined;
+
+  constructor() {
+    // Mensajes del reproductor (API de iframes de YouTube): estado de reproducción.
+    const onMsg = (ev: MessageEvent) => {
+      if (ev.origin !== YT_ORIGIN || typeof ev.data !== 'string') return;
+      let msg: { event?: string; info?: unknown };
+      try {
+        msg = JSON.parse(ev.data);
+      } catch {
+        return;
+      }
+      const state =
+        msg.event === 'onStateChange'
+          ? msg.info
+          : (msg.info as { playerState?: number } | null)?.playerState;
+      if (state === 1 && !this.showVideo() && this.revealTimer === undefined) {
+        // 1 = reproduciendo: esperar a que YouTube oculte sus controles.
+        this.revealTimer = setTimeout(() => this.showVideo.set(true), CONTROLS_MS);
+      } else if (state === 0) {
+        // 0 = terminó: volver al inicio sin recargar el reproductor.
+        this.cmd('seekTo', [0, true]);
+        this.cmd('playVideo');
+      }
+    };
+    window.addEventListener('message', onMsg);
+    inject(DestroyRef).onDestroy(() => {
+      window.removeEventListener('message', onMsg);
+      clearTimeout(this.revealTimer);
+    });
+  }
+
+  /** Pide al reproductor que avise de sus cambios de estado. */
+  protected listen(): void {
+    this.yt()?.nativeElement.contentWindow?.postMessage(JSON.stringify({ event: 'listening', id: 'portada' }), YT_ORIGIN);
+  }
+
+  private cmd(func: string, args: unknown[] = []): void {
+    this.yt()?.nativeElement.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args }), YT_ORIGIN);
+  }
 
   /** El autoplay solo funciona en silencio; el sonido se activa con un clic (API de iframes de YouTube). */
   protected toggleSound(): void {
     const next = !this.muted();
-    const cmd = (func: string, args: unknown[] = []) =>
-      this.yt()?.nativeElement.contentWindow?.postMessage(
-        JSON.stringify({ event: 'command', func, args }),
-        'https://www.youtube-nocookie.com',
-      );
     if (next) {
-      cmd('mute');
+      this.cmd('mute');
     } else {
-      cmd('unMute');
-      cmd('setVolume', [70]);
+      this.cmd('unMute');
+      this.cmd('setVolume', [70]);
     }
     this.muted.set(next);
   }
