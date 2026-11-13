@@ -13,14 +13,17 @@ const VIDEO_URL =
 /** Imagen del propio video: tapa los controles que YouTube muestra unos segundos al arrancar. */
 const POSTER = `https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
 /** Tiempo que YouTube deja visibles sus controles (⏮ ⏸ ⏭) tras empezar a reproducir. */
-const CONTROLS_MS = 3500;
+const CONTROLS_MS = 3000;
 
 /** Portada: video de fondo y el botón para entrar. El botón se activa cuando los JSON ya cargaron. */
 @Component({
   selector: 'app-loader',
   template: `
     <section class="intro" aria-label="Portada">
-      <div class="video" aria-hidden="true" [style.background-image]="'url(' + poster + ')'">
+      <div class="video" aria-hidden="true">
+        <!-- Mientras YouTube muestra sus controles: la imagen del video con zoom lento y un brillo, para que no se vea quieta. -->
+        <div class="poster" [class.off]="showVideo()" [style.background-image]="'url(' + poster + ')'"></div>
+        <div class="glow" [class.off]="showVideo()"></div>
         <iframe
           #yt
           [class.on]="showVideo()"
@@ -47,9 +50,9 @@ const CONTROLS_MS = 3500;
         }
       </div>
 
-      <button class="sound" type="button" (click)="toggleSound()" [attr.aria-pressed]="!muted()"
-              [attr.aria-label]="muted() ? 'Activar sonido del video' : 'Silenciar video'">
-        {{ muted() ? '🔇 Activar sonido' : '🔊 Silenciar' }}
+      <button #soundBtn class="sound" type="button" (click)="toggleSound()" [attr.aria-pressed]="!muted()"
+              [attr.aria-label]="muted() ? 'Activar música' : 'Silenciar música'">
+        {{ muted() ? '🔇 Activar música' : '🔊 Silenciar' }}
       </button>
       <p class="note">Video: League of Legends (Riot Games) · Proyecto no afiliado a Riot Games ni a los equipos.</p>
     </section>
@@ -67,7 +70,26 @@ const CONTROLS_MS = 3500;
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background: center / cover no-repeat;
+      .poster {
+        position: absolute;
+        inset: 0;
+        background: center / cover no-repeat;
+        transform: scale(1.12);
+        animation: kenburns 9s ease-out forwards;
+        transition: opacity 0.8s ease;
+      }
+      .glow {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 72% 32%, rgba(80, 170, 255, 0.35), transparent 38%);
+        mix-blend-mode: screen;
+        animation: pulse 2.4s ease-in-out infinite;
+        transition: opacity 0.8s ease;
+      }
+      .poster.off,
+      .glow.off {
+        opacity: 0;
+      }
       iframe {
         opacity: 0;
         transition: opacity 0.8s ease;
@@ -82,6 +104,29 @@ const CONTROLS_MS = 3500;
         // Un poco más grande para recortar los bordes y el título que muestra YouTube al empezar.
         transform: translate(-50%, -50%) scale(1.12);
         border: 0;
+      }
+    }
+    @keyframes kenburns {
+      from {
+        transform: scale(1.12) translate(0, 0);
+      }
+      to {
+        transform: scale(1.2) translate(-1.5%, 1%);
+      }
+    }
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.35;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .video .poster,
+      .video .glow {
+        animation: none;
       }
     }
     .shade {
@@ -174,6 +219,9 @@ export class LoaderComponent {
   /** El iframe se muestra cuando YouTube ya ocultó sus controles; antes se ve la imagen del video. */
   protected readonly showVideo = signal(false);
   private readonly yt = viewChild<ElementRef<HTMLIFrameElement>>('yt');
+  private readonly soundBtn = viewChild<ElementRef<HTMLButtonElement>>('soundBtn');
+  /** El usuario silenció a propósito: el primer clic ya no debe volver a activar la música. */
+  private userMuted = false;
   private revealTimer: ReturnType<typeof setTimeout> | undefined;
 
   constructor() {
@@ -200,7 +248,20 @@ export class LoaderComponent {
       }
     };
     window.addEventListener('message', onMsg);
+
+    // Los navegadores no dejan empezar con sonido: la música se activa con el primer clic, toque o tecla
+    // en cualquier parte de la portada (salvo en el botón de sonido, que ya lo controla).
+    const firstTouch = (ev: Event) => {
+      if (this.soundBtn()?.nativeElement.contains(ev.target as Node)) return;
+      if (this.muted() && !this.userMuted) this.setSound(true);
+      off();
+    };
+    const evs = ['pointerdown', 'keydown', 'touchstart'] as const;
+    const off = () => evs.forEach((e) => document.removeEventListener(e, firstTouch, true));
+    evs.forEach((e) => document.addEventListener(e, firstTouch, true));
+
     inject(DestroyRef).onDestroy(() => {
+      off();
       window.removeEventListener('message', onMsg);
       clearTimeout(this.revealTimer);
     });
@@ -217,13 +278,18 @@ export class LoaderComponent {
 
   /** El autoplay solo funciona en silencio; el sonido se activa con un clic (API de iframes de YouTube). */
   protected toggleSound(): void {
-    const next = !this.muted();
-    if (next) {
-      this.cmd('mute');
-    } else {
+    const on = this.muted();
+    this.userMuted = !on;
+    this.setSound(on);
+  }
+
+  private setSound(on: boolean): void {
+    if (on) {
       this.cmd('unMute');
       this.cmd('setVolume', [70]);
+    } else {
+      this.cmd('mute');
     }
-    this.muted.set(next);
+    this.muted.set(!on);
   }
 }
