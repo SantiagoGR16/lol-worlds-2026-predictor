@@ -1,0 +1,195 @@
+# Configuración central del proyecto. Todos los parámetros se leen de aquí.
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  # Años que se modelan (train/eval). Se filtra por la columna 'year' (temporada).
+  years: [2025, 2026]
+  file_pattern: "{year}_LoL_esports_match_data_from_OraclesElixir.csv"
+  # Ligas de los años modelados.
+  # LTA N/LTA S: nombre de LCS y CBLOL en 2025. LCP: liga del Pacífico. CBLOL vuelve en 2026.
+  leagues: [LCK, LPL, LEC, LCS, "LTA N", "LTA S", LCP, CBLOL, MSI, WLDs]
+  # Calentamiento: estos archivos solo alimentan el Elo y los rolling (historia previa).
+  # Nunca generan filas de entrenamiento ni de evaluación. Se decide por ARCHIVO,
+  # no por 'year', porque el CSV de 2024 trae filas etiquetadas como temporada 2025.
+  warmup_years: [2024]
+  # En 2024 la LCP no existía (PCS + VCS) y LCS/CBLOL tenían su nombre clásico.
+  warmup_leagues: [LCK, LPL, LEC, LCS, CBLOL, PCS, VCS, MSI, WLDs]
+  # El Mundial solo se usa para evaluar, nunca para entrenar.
+  eval_league: WLDs
+  games_file: games.parquet
+  # Filas de jugador (solo scouting, no entran al modelo).
+  players_file: players.parquet
+
+elo:
+  initial: 1500
+  # Valores elegidos por lolpred.tune_elo.
+  k: 16
+  # Al cambiar de año calendario: elo = media + factor * (elo - media).
+  season_regression: 0.75
+  # MSI y Mundial son los únicos partidos entre regiones: su K se multiplica.
+  international_leagues: [MSI, WLDs]
+  k_international: 4
+  # Puntos Elo que se suman al lado azul al calcular la probabilidad.
+  blue_bonus: 30
+  output_file: games_elo.parquet
+  tuning:
+    # Etapa 1: blue_bonus por log-loss en mapas de ligas regulares (no internacionales)
+    # de los años modelados, anteriores al Mundial de evaluación.
+    blue_bonus_grid: [0, 10, 20, 30, 40, 50]
+    # Etapa 2: k, k_international y season_regression por log-loss en el Mundial 2025.
+    # El Mundial 2026 queda intacto para evaluar.
+    tune_league: WLDs
+    tune_year: 2025
+    grid:
+      k: [16, 20, 24, 32]
+      # Ampliada (antes 1.5-3): el óptimo anterior quedó en el borde, en 3.
+      k_international: [1.5, 2, 3, 4, 5]
+      season_regression: [0.5, 0.75]
+
+modeling:
+  # Torneo y año que se reservan para evaluar (nunca para entrenar).
+  eval_year: 2026
+  # Fold de validación: se entrena con lo anterior a este Mundial y se valida en él.
+  # Las decisiones (calibración, mejor modelo) se toman SOLO con este fold.
+  val_year: 2025
+  # Bloques temporales dentro del train (los más recientes): early stopping y calibración.
+  es_frac: 0.15
+  cal_frac: 0.15
+  calibration_methods: [sigmoid, isotonic]
+  # (b) Regresión logística.
+  logreg_features: [elo_diff, blue_first_pick]
+  logreg_C: 1.0
+  # (c) LightGBM: todas las features cuyo nombre empieza por estos prefijos, más extras.
+  # Se excluye diff_dias_desde_ultimo (sin señal en el EDA y desconocido para la final).
+  lgbm_feature_prefixes: [diff_result_, diff_golddiffat15_, diff_xpdiffat15_, diff_firstdragon_,
+                          diff_firstherald_, diff_firsttower_, diff_dpm_, diff_gamelength_,
+                          diff_kills_pm_, diff_deaths_pm_, n_mapas_, n_validos15_]
+  lgbm_extra_features: [elo_diff, blue_first_pick]
+  lgbm_params:
+    num_leaves: 15
+    min_child_samples: 50
+    learning_rate: 0.02
+    n_estimators: 3000
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    random_state: 42
+    verbose: -1
+  early_stopping_rounds: 150
+  # Si la accuracy en un Mundial supera este umbral, se detiene: posible leakage.
+  max_plausible_accuracy: 0.72
+  models_dir: models
+  model_file: best_model.joblib
+  metrics_file: model_metrics.parquet
+  predictions_file: wlds_predictions.parquet
+  # Elegidos por lolpred.modeling con el fold de validación (no editar a mano).
+  best_model: elo
+  best_calibration: none
+
+simulation:
+  teams: ["Gen.G", "Bilibili Gaming"]
+  # Mapa 1: lado sin información (sorteo/seed): P(Gen.G en azul).
+  map1_p_team_blue: 0.5
+  n_series: 100000
+  wins_needed: 3
+  # Bootstrap del modelo (reajuste sobre remuestreos del train) para el intervalo.
+  n_bootstrap: 200
+  ci_level: 0.9
+  random_state: 2026
+  output_file: series_prediction.parquet
+  # Ajuste a nivel de serie (ver lolpred.verification):
+  #   day_form      = forma del día: eps ~ N(0, sigma²) compartido por los mapas de la serie
+  #                   (elegido: corrige a la vez la sobreconfianza y las barridas del backtest)
+  #   recalibration = recalibración logística de P(serie) (anterior; no corrige marcadores)
+  #   none          = simulador estático
+  series_adjustment: day_form
+  # Escritos por lolpred.verification (no editar a mano).
+  day_form_dynamic_elo: false
+  day_form_sigma: 0.8386
+  day_form_sigma_ci: [0.7386, 0.9386]
+  gh_nodes: 12
+
+features:
+  # Ventanas de los rolling (últimos N mapas del equipo, siempre con shift(1)).
+  windows: [10, 20]
+  # Stats por equipo que se promedian. kills_pm/deaths_pm se derivan (por minuto).
+  stats: [result, golddiffat15, xpdiffat15, firstdragon, firstherald, firsttower,
+          dpm, gamelength, kills_pm, deaths_pm]
+  # Stats que faltan en partidas 'partial': se cuenta cuántos mapas válidos hay por ventana.
+  stats_at15: [golddiffat15, xpdiffat15, firstherald]
+  output_file: features.parquet
+
+series:
+  # Frecuencias de lado y primer pick en series, estimadas por lolpred.series.
+  # Se usa la última temporada modelada y se excluye el Mundial de evaluación.
+  output_file: side_choice.parquet
+  # Separación máxima (horas) entre mapas consecutivos de una misma serie.
+  max_gap_hours: 8
+
+scouting:
+  # Tablero de scouting para la web. NO entra al modelo.
+  teams: ["Gen.G", "Bilibili Gaming"]
+  eval_league: WLDs
+  eval_year: 2026
+  # Peso del pool de todo 2026 frente al del Mundial en P(pick).
+  prior_weight: 0.3
+  # Parches anteriores al primero del Mundial que también entran al pool del año
+  # (1 = 16.16): Gen.G no jugó LCK en 16.17/16.20 y sin esto el suavizado no actuaba.
+  # El share del Mundial sigue usando solo los parches del Mundial.
+  prior_extra_patches: 1
+  top_n_champs: 5
+  # Mínimo de mapas en el Mundial para entrar a los z-scores del rol.
+  min_maps_z: 3
+  # Métricas del mvp_score (promedio de z-scores dentro del rol).
+  mvp_metrics: [kda, kp, dpm, gd15, dmg_share]
+  # Cruces: campeón del top N de un jugador que el rival banea en >= este % de sus mapas.
+  crossover_top: 3
+  crossover_ban_rate: 0.3
+  web_data_dir: web/src/assets/data
+
+verification:
+  # (1) Backtest del simulador: series reales de estos formatos, con el Elo previo a cada serie.
+  backtest_formats: [Bo5]
+  backtest_file: backtest_series.parquet
+  # (2) Bradley-Terry: fuerza por equipo + ventaja de lado + efecto del primer pick.
+  # Hiperparámetros elegidos por log-loss en el Mundial val_year (2025) con mapas de esa
+  # temporada; el Mundial 2026 solo se usa para comprobar.
+  bt_half_life_grid: [60, 120, 240, 0]   # días; 0 = sin decaimiento temporal
+  bt_C_grid: [0.3, 1.0, 3.0]             # inversa de la regularización L2
+  # Bootstrap por SERIES (no por mapas: los mapas de una serie no son independientes).
+  bt_n_bootstrap: 300
+  bt_output_file: bradley_terry.parquet
+  # Recalibración a nivel de SERIE: p' = sigmoide(a + b·logit(p_simulador)), ajustada con
+  # el backtest (series anteriores al Mundial de evaluación, sin ese Mundial).
+  recal_file: series_recalibration.parquet
+  recal_n_bootstrap: 1000
+  series_model_file: series_model.parquet
+  # Variantes del simulador (Elo dinámico y forma del día): sigma máximo y nodos de Gauss-Hermite.
+  max_sigma: 2.0
+  gh_nodes: 12
+
+explain:
+  # El modelo oficial (Elo) tiene una sola feature; se explica el modelo de mapa calibrado
+  # con features (LightGBM + Platt), que es el que reparte la predicción entre varias señales.
+  model_file: model_lgbm.joblib
+  # Grupos de features (por prefijo): las variables muy correlacionadas se suman en un grupo
+  # para que no se repartan la importancia.
+  groups:
+    Elo: [elo_diff]
+    Primer pick: [blue_first_pick]
+    Ventaja temprana: [diff_golddiffat15_, diff_xpdiffat15_]
+    Forma reciente: [diff_result_, diff_kills_pm_]
+    Muertes por minuto: [diff_deaths_pm_]
+    Daño por minuto: [diff_dpm_]
+    Objetivos tempranos: [diff_firsttower_, diff_firstherald_, diff_firstdragon_]
+    Duración de partidas: [diff_gamelength_]
+    Tamaño de muestra: [n_mapas_, n_validos15_]
+  background_n: 200
+  max_evals: 500
+  random_state: 7
+  # Desglose del enfrentamiento: configuración más habitual del mapa 1 en 2026 (el rojo
+  # tiene el primer pick el 62 % de las veces) -> blue_first_pick = 0 en ambos lados.
+  matchup_blue_first_pick: 0
+  global_file: shap_global.parquet
+  matchup_file: shap_matchup.parquet

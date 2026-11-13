@@ -1,0 +1,4310 @@
+{
+  "nota": "Elo previo a cada mapa (temporadas 2025-2026; 2024 solo como calentamiento). elo_actual = Elo tras el último mapa jugado.",
+  "teams": {
+    "Gen.G": {
+      "teamid": "oe:team:50f58982d91a36557ec8aec52ab014f",
+      "points": [
+        {
+          "date": "2025-01-17 08:08",
+          "elo": 1724.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-01-17 08:59",
+          "elo": 1730.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-01-19 08:34",
+          "elo": 1736.6,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-01-19 09:34",
+          "elo": 1739.1,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-01-23 08:04",
+          "elo": 1741.6,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 0
+        },
+        {
+          "date": "2025-01-23 09:12",
+          "elo": 1727.2,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 0
+        },
+        {
+          "date": "2025-01-25 09:24",
+          "elo": 1712.6,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-01-25 10:14",
+          "elo": 1715.2,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-02-01 06:04",
+          "elo": 1718.5,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-02-01 06:57",
+          "elo": 1712.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-02-01 07:51",
+          "elo": 1722.1,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-02-16 06:06",
+          "elo": 1716.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-16 07:06",
+          "elo": 1706.7,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-16 08:01",
+          "elo": 1713.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-16 08:51",
+          "elo": 1705.3,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-16 09:44",
+          "elo": 1712.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-20 08:05",
+          "elo": 1704.0,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-02-20 09:02",
+          "elo": 1708.1,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-02-20 10:09",
+          "elo": 1712.1,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 0
+        },
+        {
+          "date": "2025-02-20 11:04",
+          "elo": 1699.9,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 0
+        },
+        {
+          "date": "2025-02-20 12:04",
+          "elo": 1687.2,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-02-22 06:07",
+          "elo": 1690.9,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-02-22 06:51",
+          "elo": 1697.2,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-02-22 07:41",
+          "elo": 1703.2,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-02-23 06:21",
+          "elo": 1709.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-23 07:16",
+          "elo": 1701.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-23 08:02",
+          "elo": 1708.2,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-23 08:55",
+          "elo": 1700.3,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-23 09:50",
+          "elo": 1707.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-04-02 08:11",
+          "elo": 1699.5,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-04-02 09:01",
+          "elo": 1708.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-04-06 08:29",
+          "elo": 1716.2,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-04-06 09:29",
+          "elo": 1710.3,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-04-06 10:34",
+          "elo": 1719.4,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-04-11 11:07",
+          "elo": 1729.4,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-04-11 11:58",
+          "elo": 1732.7,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-04-13 06:06",
+          "elo": 1736.9,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2025-04-13 06:57",
+          "elo": 1726.3,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-04-13 07:49",
+          "elo": 1730.8,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-04-16 11:13",
+          "elo": 1736.4,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 0
+        },
+        {
+          "date": "2025-04-16 12:09",
+          "elo": 1723.0,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-04-16 13:02",
+          "elo": 1725.1,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-04-19 06:05",
+          "elo": 1727.9,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2025-04-19 07:01",
+          "elo": 1729.3,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2025-04-24 08:06",
+          "elo": 1731.3,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-04-24 09:03",
+          "elo": 1732.9,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-04-26 09:17",
+          "elo": 1734.9,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2025-04-26 10:06",
+          "elo": 1737.1,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2025-05-01 08:05",
+          "elo": 1739.3,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-05-01 08:56",
+          "elo": 1741.9,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-05-03 06:07",
+          "elo": 1745.4,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-05-03 07:14",
+          "elo": 1749.3,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2025-05-08 10:16",
+          "elo": 1753.1,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-05-08 11:06",
+          "elo": 1757.3,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-05-10 08:12",
+          "elo": 1761.4,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-05-10 09:10",
+          "elo": 1763.1,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2025-05-16 10:15",
+          "elo": 1765.3,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-05-16 11:02",
+          "elo": 1767.0,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2025-05-18 08:21",
+          "elo": 1768.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-05-18 09:22",
+          "elo": 1774.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-05-21 08:06",
+          "elo": 1781.8,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-05-21 08:57",
+          "elo": 1787.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-05-21 10:07",
+          "elo": 1778.5,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-05-23 08:07",
+          "elo": 1784.4,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2025-05-23 08:55",
+          "elo": 1785.9,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2025-05-29 11:54",
+          "elo": 1787.8,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-05-29 12:41",
+          "elo": 1791.3,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-05-29 13:33",
+          "elo": 1778.6,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-05-31 08:16",
+          "elo": 1781.5,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2025-05-31 09:12",
+          "elo": 1783.3,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2025-06-13 08:18",
+          "elo": 1785.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-06-13 09:32",
+          "elo": 1774.8,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-06-13 10:26",
+          "elo": 1765.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-13 11:19",
+          "elo": 1771.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-13 12:18",
+          "elo": 1779.3,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-02 00:13",
+          "elo": 1786.6,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-07-02 01:06",
+          "elo": 1735.8,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-02 01:59",
+          "elo": 1756.1,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-02 02:47",
+          "elo": 1778.0,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-04 22:04",
+          "elo": 1792.3,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-04 22:53",
+          "elo": 1760.2,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-07-04 23:44",
+          "elo": 1792.4,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-07-05 00:40",
+          "elo": 1824.3,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-05 01:32",
+          "elo": 1786.3,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-07-10 00:07",
+          "elo": 1813.8,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-10 01:03",
+          "elo": 1850.7,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-10 01:52",
+          "elo": 1816.8,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-10 02:53",
+          "elo": 1847.7,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-10 04:01",
+          "elo": 1814.3,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-13 00:16",
+          "elo": 1845.6,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-13 01:10",
+          "elo": 1811.9,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-13 02:03",
+          "elo": 1848.4,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-13 02:50",
+          "elo": 1819.7,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-13 03:39",
+          "elo": 1854.7,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-23 11:17",
+          "elo": 1888.9,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-23 12:09",
+          "elo": 1892.2,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-25 08:11",
+          "elo": 1896.4,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-07-25 09:06",
+          "elo": 1903.2,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-25 10:00",
+          "elo": 1893.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-08-01 08:04",
+          "elo": 1883.3,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-01 09:03",
+          "elo": 1885.4,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-03 08:33",
+          "elo": 1888.2,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-03 09:25",
+          "elo": 1889.8,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-07 11:20",
+          "elo": 1891.4,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-08-07 12:13",
+          "elo": 1881.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-08-07 13:06",
+          "elo": 1888.6,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-08-10 06:06",
+          "elo": 1896.4,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-10 07:02",
+          "elo": 1898.8,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-14 08:07",
+          "elo": 1901.2,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-14 08:58",
+          "elo": 1902.3,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-17 06:07",
+          "elo": 1903.7,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-17 07:00",
+          "elo": 1908.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-08-17 07:55",
+          "elo": 1896.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-20 10:33",
+          "elo": 1899.6,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-20 11:30",
+          "elo": 1900.6,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2025-08-23 06:06",
+          "elo": 1902.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-23 07:02",
+          "elo": 1906.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-08-23 07:59",
+          "elo": 1894.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-28 10:12",
+          "elo": 1898.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-28 11:16",
+          "elo": 1900.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-08-30 06:12",
+          "elo": 1902.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-08-30 07:14",
+          "elo": 1893.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-08-30 08:01",
+          "elo": 1899.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-09-13 06:11",
+          "elo": 1906.7,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-09-13 07:02",
+          "elo": 1892.7,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-09-13 08:03",
+          "elo": 1895.1,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-09-13 08:59",
+          "elo": 1898.1,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-09-13 10:01",
+          "elo": 1885.0,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-09-21 06:08",
+          "elo": 1871.6,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-09-21 07:07",
+          "elo": 1876.7,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-09-21 07:59",
+          "elo": 1866.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-09-21 08:57",
+          "elo": 1856.2,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-09-21 09:50",
+          "elo": 1863.3,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-09-27 05:23",
+          "elo": 1870.0,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-09-27 06:19",
+          "elo": 1873.5,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-09-27 07:11",
+          "elo": 1876.9,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-09-28 05:30",
+          "elo": 1880.2,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-28 06:24",
+          "elo": 1886.2,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-28 07:27",
+          "elo": 1891.9,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-09-28 08:21",
+          "elo": 1881.3,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-15 12:27",
+          "elo": 1886.0,
+          "league": "WLDs",
+          "rival": "PSG Talon",
+          "result": 1
+        },
+        {
+          "date": "2025-10-16 10:06",
+          "elo": 1893.4,
+          "league": "WLDs",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-10-18 09:22",
+          "elo": 1847.0,
+          "league": "WLDs",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2025-10-23 10:56",
+          "elo": 1871.8,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-23 11:42",
+          "elo": 1887.1,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-28 07:13",
+          "elo": 1904.4,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-28 08:07",
+          "elo": 1925.5,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-28 09:29",
+          "elo": 1948.1,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-10-28 10:23",
+          "elo": 1903.0,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-11-01 07:16",
+          "elo": 1924.3,
+          "league": "WLDs",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-11-01 08:23",
+          "elo": 1880.3,
+          "league": "WLDs",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2025-11-01 09:23",
+          "elo": 1907.9,
+          "league": "WLDs",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2025-11-01 10:13",
+          "elo": 1871.9,
+          "league": "WLDs",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2026-01-15 08:05",
+          "elo": 1752.7,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-01-15 08:56",
+          "elo": 1755.0,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-01-17 11:10",
+          "elo": 1756.7,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-01-17 12:05",
+          "elo": 1765.7,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-01-22 11:14",
+          "elo": 1773.0,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-01-22 12:11",
+          "elo": 1775.2,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-01-24 11:24",
+          "elo": 1777.3,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-01-24 12:21",
+          "elo": 1781.4,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-02-01 08:08",
+          "elo": 1784.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-02-01 09:10",
+          "elo": 1789.4,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-02-01 10:09",
+          "elo": 1794.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-02-14 08:07",
+          "elo": 1798.7,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-02-14 09:01",
+          "elo": 1802.3,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-02-14 10:10",
+          "elo": 1789.7,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-02-14 11:05",
+          "elo": 1793.5,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-02-21 08:08",
+          "elo": 1796.4,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-02-21 09:07",
+          "elo": 1798.9,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-02-21 10:03",
+          "elo": 1801.3,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 0
+        },
+        {
+          "date": "2026-02-21 10:56",
+          "elo": 1787.7,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-03-01 08:22",
+          "elo": 1790.4,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-03-01 09:14",
+          "elo": 1793.4,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-03-01 10:01",
+          "elo": 1796.3,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-04-03 08:10",
+          "elo": 1799.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2026-04-03 08:58",
+          "elo": 1789.5,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-04-03 09:48",
+          "elo": 1794.9,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2026-04-05 10:22",
+          "elo": 1784.1,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-04-05 11:13",
+          "elo": 1786.7,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-04-08 10:19",
+          "elo": 1789.3,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-04-08 11:07",
+          "elo": 1796.1,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-04-11 10:14",
+          "elo": 1802.5,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-04-11 11:07",
+          "elo": 1789.8,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-04-16 08:07",
+          "elo": 1776.7,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2026-04-16 09:01",
+          "elo": 1778.7,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2026-04-18 08:07",
+          "elo": 1780.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-04-18 09:00",
+          "elo": 1769.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-04-23 10:15",
+          "elo": 1759.8,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2026-04-23 11:13",
+          "elo": 1762.0,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2026-04-26 10:15",
+          "elo": 1763.6,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2026-04-26 11:09",
+          "elo": 1766.6,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2026-04-30 08:06",
+          "elo": 1769.5,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-04-30 08:55",
+          "elo": 1771.1,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 0
+        },
+        {
+          "date": "2026-04-30 09:47",
+          "elo": 1757.1,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-05-02 08:06",
+          "elo": 1759.5,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-05-02 08:55",
+          "elo": 1765.0,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-05-02 09:50",
+          "elo": 1753.1,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-05-06 08:06",
+          "elo": 1758.8,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2026-05-06 09:11",
+          "elo": 1761.6,
+          "league": "LCK",
+          "rival": "Nongshim RedForce",
+          "result": 1
+        },
+        {
+          "date": "2026-05-08 10:40",
+          "elo": 1763.5,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-05-08 11:32",
+          "elo": 1765.3,
+          "league": "LCK",
+          "rival": "Kiwoom DRX",
+          "result": 1
+        },
+        {
+          "date": "2026-05-14 08:07",
+          "elo": 1767.1,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-05-14 09:00",
+          "elo": 1770.6,
+          "league": "LCK",
+          "rival": "BNK FEARX",
+          "result": 1
+        },
+        {
+          "date": "2026-05-16 08:05",
+          "elo": 1774.0,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-05-16 08:57",
+          "elo": 1781.0,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-05-16 10:10",
+          "elo": 1773.1,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-05-22 10:20",
+          "elo": 1765.5,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-05-22 11:11",
+          "elo": 1772.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-05-24 08:06",
+          "elo": 1778.5,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2026-05-24 08:56",
+          "elo": 1779.5,
+          "league": "LCK",
+          "rival": "DN SOOPers",
+          "result": 1
+        },
+        {
+          "date": "2026-05-27 08:06",
+          "elo": 1780.5,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-05-27 09:12",
+          "elo": 1770.3,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-05-27 10:06",
+          "elo": 1776.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-05-29 11:07",
+          "elo": 1782.7,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2026-05-29 12:01",
+          "elo": 1784.5,
+          "league": "LCK",
+          "rival": "HANJIN BRION",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 06:22",
+          "elo": 1786.4,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 07:26",
+          "elo": 1791.0,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 08:24",
+          "elo": 1796.6,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 06:27",
+          "elo": 1800.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 07:24",
+          "elo": 1808.6,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-06-14 08:27",
+          "elo": 1800.0,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-06-14 09:36",
+          "elo": 1791.8,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 10:35",
+          "elo": 1800.0,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-07-31 08:15",
+          "elo": 1790.4,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-07-31 09:08",
+          "elo": 1780.5,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-08-01 12:05",
+          "elo": 1772.5,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-08-05 11:19",
+          "elo": 1762.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-05 12:23",
+          "elo": 1771.7,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-08-05 13:15",
+          "elo": 1764.8,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-07 08:07",
+          "elo": 1775.6,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-08-07 08:59",
+          "elo": 1780.9,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-08-13 11:04",
+          "elo": 1786.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-13 12:05",
+          "elo": 1796.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-16 08:07",
+          "elo": 1804.5,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-08-16 09:15",
+          "elo": 1810.5,
+          "league": "LCK",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-08-19 08:05",
+          "elo": 1816.3,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-08-19 09:02",
+          "elo": 1820.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 0
+        },
+        {
+          "date": "2026-08-19 09:53",
+          "elo": 1809.1,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-08-22 08:08",
+          "elo": 1814.4,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-08-22 09:02",
+          "elo": 1818.7,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-08-22 09:57",
+          "elo": 1808.0,
+          "league": "LCK",
+          "rival": "Dplus Kia",
+          "result": 0
+        },
+        {
+          "date": "2026-09-01 08:11",
+          "elo": 1797.7,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-09-01 09:13",
+          "elo": 1802.2,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-09-01 10:08",
+          "elo": 1806.5,
+          "league": "LCK",
+          "rival": "KT Rolster",
+          "result": 1
+        },
+        {
+          "date": "2026-09-05 08:08",
+          "elo": 1810.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-09-05 09:11",
+          "elo": 1804.1,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-09-05 10:19",
+          "elo": 1812.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-09-05 11:12",
+          "elo": 1822.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-09-13 05:30",
+          "elo": 1829.6,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-09-13 06:33",
+          "elo": 1821.0,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-09-13 07:29",
+          "elo": 1830.2,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-09-13 08:19",
+          "elo": 1838.9,
+          "league": "LCK",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-10-23 17:21",
+          "elo": 1845.9,
+          "league": "WLDs",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-10-24 22:24",
+          "elo": 1859.8,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-10-25 20:59",
+          "elo": 1892.3,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 0
+        },
+        {
+          "date": "2026-10-25 21:56",
+          "elo": 1854.1,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-10-25 22:43",
+          "elo": 1881.4,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-11-04 22:13",
+          "elo": 1903.9,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-11-04 23:06",
+          "elo": 1920.0,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-11-04 23:54",
+          "elo": 1933.9,
+          "league": "WLDs",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-11-07 22:14",
+          "elo": 1946.2,
+          "league": "WLDs",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-11-07 23:09",
+          "elo": 1961.4,
+          "league": "WLDs",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-11-08 00:00",
+          "elo": 1974.6,
+          "league": "WLDs",
+          "rival": "Invictus Gaming",
+          "result": 1
+        }
+      ],
+      "elo_actual": 1990.0,
+      "fecha_actual": "2026-11-08 00:00"
+    },
+    "Bilibili Gaming": {
+      "teamid": "oe:team:d356a144644879dabb5f34cd99c886d",
+      "points": [
+        {
+          "date": "2025-01-17 09:30",
+          "elo": 1757.1,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-01-17 10:26",
+          "elo": 1759.6,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-01-17 11:21",
+          "elo": 1762.1,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-01-25 05:30",
+          "elo": 1764.5,
+          "league": "LPL",
+          "rival": "LNG Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-01-25 06:25",
+          "elo": 1768.6,
+          "league": "LPL",
+          "rival": "LNG Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-01-25 07:19",
+          "elo": 1773.6,
+          "league": "LPL",
+          "rival": "LNG Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-14 09:22",
+          "elo": 1778.5,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-02-14 10:16",
+          "elo": 1765.3,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-02-14 11:12",
+          "elo": 1753.4,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-14 12:03",
+          "elo": 1757.0,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-14 12:53",
+          "elo": 1761.4,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-02-23 06:13",
+          "elo": 1749.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-23 07:06",
+          "elo": 1755.3,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-02-23 07:57",
+          "elo": 1744.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-23 08:56",
+          "elo": 1749.3,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-24 06:13",
+          "elo": 1754.9,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-02-24 07:14",
+          "elo": 1742.2,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-24 08:07",
+          "elo": 1745.9,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-24 09:02",
+          "elo": 1750.6,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-02-26 09:13",
+          "elo": 1755.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-02-26 10:08",
+          "elo": 1759.9,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-26 11:00",
+          "elo": 1749.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-02-26 12:01",
+          "elo": 1738.9,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-03-22 09:19",
+          "elo": 1728.4,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-03-22 11:16",
+          "elo": 1731.0,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-03-22 13:03",
+          "elo": 1735.7,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-03-26 09:18",
+          "elo": 1738.8,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-03-26 10:19",
+          "elo": 1740.5,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-03-26 12:25",
+          "elo": 1730.4,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-05 11:03",
+          "elo": 1732.6,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-05 11:52",
+          "elo": 1737.1,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-06 13:16",
+          "elo": 1741.4,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-06 14:26",
+          "elo": 1744.6,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-10 11:32",
+          "elo": 1748.6,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-04-10 12:26",
+          "elo": 1737.0,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-04-10 13:21",
+          "elo": 1741.8,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-04-12 12:55",
+          "elo": 1731.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-04-12 13:46",
+          "elo": 1719.9,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-04-17 09:25",
+          "elo": 1708.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-04-17 10:21",
+          "elo": 1711.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2025-04-17 11:12",
+          "elo": 1697.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-04-20 09:26",
+          "elo": 1700.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-04-20 10:18",
+          "elo": 1707.2,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-04-20 11:17",
+          "elo": 1699.5,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-04-25 12:42",
+          "elo": 1690.7,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2025-04-25 13:35",
+          "elo": 1695.5,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2025-04-28 11:27",
+          "elo": 1700.1,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 0
+        },
+        {
+          "date": "2025-04-28 12:19",
+          "elo": 1687.2,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-04-28 13:07",
+          "elo": 1690.7,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 0
+        },
+        {
+          "date": "2025-04-29 13:04",
+          "elo": 1679.1,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-04-29 13:59",
+          "elo": 1669.9,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-04-29 15:00",
+          "elo": 1675.8,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-05-02 12:10",
+          "elo": 1666.8,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-05-02 13:00",
+          "elo": 1656.9,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-02 13:48",
+          "elo": 1663.4,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-03 09:35",
+          "elo": 1671.0,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-05-03 10:29",
+          "elo": 1674.8,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 0
+        },
+        {
+          "date": "2025-05-03 11:29",
+          "elo": 1663.5,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-05-05 11:29",
+          "elo": 1667.5,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-05 12:35",
+          "elo": 1671.0,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-07 11:42",
+          "elo": 1675.3,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-05-07 12:41",
+          "elo": 1682.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-05-10 12:36",
+          "elo": 1690.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-05-10 13:36",
+          "elo": 1694.0,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-05-13 09:18",
+          "elo": 1698.3,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2025-05-13 10:20",
+          "elo": 1701.9,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 0
+        },
+        {
+          "date": "2025-05-13 11:12",
+          "elo": 1690.5,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2025-05-17 11:40",
+          "elo": 1694.4,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-05-17 12:35",
+          "elo": 1685.0,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-05-20 11:54",
+          "elo": 1674.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-05-20 12:49",
+          "elo": 1682.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-05-21 11:37",
+          "elo": 1691.9,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-21 12:31",
+          "elo": 1696.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-05-21 13:25",
+          "elo": 1686.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-31 10:18",
+          "elo": 1692.0,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-31 11:11",
+          "elo": 1697.3,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-05-31 12:13",
+          "elo": 1703.6,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-06-02 09:14",
+          "elo": 1709.6,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-02 10:06",
+          "elo": 1717.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-02 11:03",
+          "elo": 1725.6,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-09 09:18",
+          "elo": 1733.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-09 10:12",
+          "elo": 1724.3,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-06-09 11:03",
+          "elo": 1730.6,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-09 11:53",
+          "elo": 1721.9,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-06-09 13:00",
+          "elo": 1728.3,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-13 09:16",
+          "elo": 1719.7,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-06-13 10:14",
+          "elo": 1708.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-06-13 11:13",
+          "elo": 1714.2,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-06-13 12:08",
+          "elo": 1720.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-06-14 09:19",
+          "elo": 1727.0,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-14 10:11",
+          "elo": 1718.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-14 11:14",
+          "elo": 1709.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-06-14 12:20",
+          "elo": 1716.5,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-06-28 00:05",
+          "elo": 1708.6,
+          "league": "MSI",
+          "rival": "GAM Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-28 00:57",
+          "elo": 1728.8,
+          "league": "MSI",
+          "rival": "GAM Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-28 01:49",
+          "elo": 1750.6,
+          "league": "MSI",
+          "rival": "GAM Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-29 00:14",
+          "elo": 1769.0,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-29 01:11",
+          "elo": 1785.4,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-06-29 02:03",
+          "elo": 1803.8,
+          "league": "MSI",
+          "rival": "G2 Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-07-03 19:09",
+          "elo": 1819.6,
+          "league": "MSI",
+          "rival": "Movistar KOI",
+          "result": 1
+        },
+        {
+          "date": "2025-07-03 20:06",
+          "elo": 1834.7,
+          "league": "MSI",
+          "rival": "Movistar KOI",
+          "result": 0
+        },
+        {
+          "date": "2025-07-03 20:57",
+          "elo": 1783.8,
+          "league": "MSI",
+          "rival": "Movistar KOI",
+          "result": 1
+        },
+        {
+          "date": "2025-07-03 21:54",
+          "elo": 1799.7,
+          "league": "MSI",
+          "rival": "Movistar KOI",
+          "result": 1
+        },
+        {
+          "date": "2025-07-05 22:55",
+          "elo": 1817.6,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-05 23:42",
+          "elo": 1775.3,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-06 00:38",
+          "elo": 1740.4,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2025-07-09 00:08",
+          "elo": 1711.9,
+          "league": "MSI",
+          "rival": "FlyQuest",
+          "result": 0
+        },
+        {
+          "date": "2025-07-09 01:04",
+          "elo": 1682.5,
+          "league": "MSI",
+          "rival": "FlyQuest",
+          "result": 1
+        },
+        {
+          "date": "2025-07-09 01:55",
+          "elo": 1717.0,
+          "league": "MSI",
+          "rival": "FlyQuest",
+          "result": 1
+        },
+        {
+          "date": "2025-07-09 03:12",
+          "elo": 1745.1,
+          "league": "MSI",
+          "rival": "FlyQuest",
+          "result": 0
+        },
+        {
+          "date": "2025-07-09 04:02",
+          "elo": 1704.3,
+          "league": "MSI",
+          "rival": "FlyQuest",
+          "result": 1
+        },
+        {
+          "date": "2025-07-11 00:08",
+          "elo": 1734.7,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-11 01:05",
+          "elo": 1708.4,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-11 01:56",
+          "elo": 1681.5,
+          "league": "MSI",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-26 10:12",
+          "elo": 1659.2,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-07-26 11:19",
+          "elo": 1654.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-07-26 12:21",
+          "elo": 1665.2,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-07-27 09:14",
+          "elo": 1676.5,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-07-27 10:08",
+          "elo": 1679.6,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-07-31 12:10",
+          "elo": 1683.6,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-07-31 13:13",
+          "elo": 1689.8,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-03 11:15",
+          "elo": 1695.6,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-03 12:15",
+          "elo": 1702.4,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-08-06 09:16",
+          "elo": 1710.1,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-06 10:18",
+          "elo": 1698.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-06 11:13",
+          "elo": 1703.8,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-09 07:12",
+          "elo": 1709.9,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-08-09 08:06",
+          "elo": 1714.4,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2025-08-09 08:55",
+          "elo": 1702.8,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-08-10 12:06",
+          "elo": 1706.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-08-10 13:16",
+          "elo": 1710.1,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2025-08-10 14:10",
+          "elo": 1698.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2025-08-13 12:04",
+          "elo": 1702.5,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2025-08-13 12:56",
+          "elo": 1710.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-08-13 13:49",
+          "elo": 1702.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2025-08-15 11:16",
+          "elo": 1694.3,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-15 12:29",
+          "elo": 1682.4,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-15 13:28",
+          "elo": 1687.0,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-17 11:05",
+          "elo": 1692.6,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-08-17 11:56",
+          "elo": 1684.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-08-18 11:18",
+          "elo": 1676.0,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-18 12:31",
+          "elo": 1666.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-18 13:30",
+          "elo": 1674.0,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-21 11:09",
+          "elo": 1666.3,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-21 12:07",
+          "elo": 1673.1,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-21 12:51",
+          "elo": 1663.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-08-25 11:56",
+          "elo": 1669.2,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-08-25 13:02",
+          "elo": 1672.7,
+          "league": "LPL",
+          "rival": "FunPlus Phoenix",
+          "result": 1
+        },
+        {
+          "date": "2025-08-28 12:03",
+          "elo": 1676.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-08-28 13:01",
+          "elo": 1668.9,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-09-07 06:13",
+          "elo": 1660.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-09-07 07:06",
+          "elo": 1650.2,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-09-07 08:04",
+          "elo": 1640.2,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-07 08:56",
+          "elo": 1646.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-07 09:54",
+          "elo": 1654.1,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-09 09:14",
+          "elo": 1661.3,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-09 10:07",
+          "elo": 1669.7,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-09 10:59",
+          "elo": 1679.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2025-09-09 11:56",
+          "elo": 1672.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2025-09-15 09:11",
+          "elo": 1680.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-15 10:12",
+          "elo": 1689.3,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-09-15 11:19",
+          "elo": 1682.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-09-15 12:09",
+          "elo": 1673.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-15 13:03",
+          "elo": 1681.9,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-21 08:21",
+          "elo": 1691.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-09-21 09:21",
+          "elo": 1682.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-21 10:18",
+          "elo": 1691.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-09-21 11:10",
+          "elo": 1684.2,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-09-21 12:03",
+          "elo": 1692.3,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-15 08:15",
+          "elo": 1701.4,
+          "league": "WLDs",
+          "rival": "100 Thieves",
+          "result": 0
+        },
+        {
+          "date": "2025-10-16 11:02",
+          "elo": 1655.1,
+          "league": "WLDs",
+          "rival": "Fnatic",
+          "result": 1
+        },
+        {
+          "date": "2025-10-18 10:12",
+          "elo": 1676.3,
+          "league": "WLDs",
+          "rival": "G2 Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-10-24 08:12",
+          "elo": 1637.3,
+          "league": "WLDs",
+          "rival": "Vivo Keyd Stars",
+          "result": 1
+        },
+        {
+          "date": "2025-10-24 09:01",
+          "elo": 1661.0,
+          "league": "WLDs",
+          "rival": "Vivo Keyd Stars",
+          "result": 1
+        },
+        {
+          "date": "2025-10-25 07:34",
+          "elo": 1685.8,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2025-10-25 08:22",
+          "elo": 1718.9,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2025-10-25 09:13",
+          "elo": 1676.8,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-01-15 11:30",
+          "elo": 1610.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-01-15 12:30",
+          "elo": 1600.3,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-15 13:36",
+          "elo": 1607.8,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-17 09:15",
+          "elo": 1613.6,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-01-17 10:13",
+          "elo": 1608.9,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-01-17 11:11",
+          "elo": 1620.3,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-01-18 09:12",
+          "elo": 1630.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-01-18 10:08",
+          "elo": 1637.4,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-01-20 11:17",
+          "elo": 1644.5,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-20 12:18",
+          "elo": 1650.7,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-23 13:26",
+          "elo": 1656.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-01-23 14:37",
+          "elo": 1646.3,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-01-26 11:24",
+          "elo": 1637.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-01-26 12:31",
+          "elo": 1629.0,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-26 13:31",
+          "elo": 1636.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-01-30 11:11",
+          "elo": 1626.7,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-01-30 12:07",
+          "elo": 1635.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-01-30 12:59",
+          "elo": 1625.6,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-01-31 12:28",
+          "elo": 1616.6,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-01-31 13:36",
+          "elo": 1624.5,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-02-02 12:10",
+          "elo": 1630.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-02-02 13:05",
+          "elo": 1637.9,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-02-06 09:56",
+          "elo": 1643.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-02-06 11:05",
+          "elo": 1652.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-02-06 12:04",
+          "elo": 1645.0,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-02-25 09:30",
+          "elo": 1639.3,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2026-02-25 10:24",
+          "elo": 1645.2,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2026-02-25 11:20",
+          "elo": 1650.8,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2026-02-27 09:14",
+          "elo": 1656.2,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-02-27 10:10",
+          "elo": 1662.1,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-02-27 10:59",
+          "elo": 1667.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-04 09:12",
+          "elo": 1673.0,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-03-04 10:18",
+          "elo": 1664.2,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-04 11:17",
+          "elo": 1671.8,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-03-04 12:17",
+          "elo": 1661.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-04 13:12",
+          "elo": 1669.5,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-08 09:17",
+          "elo": 1675.5,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-08 10:16",
+          "elo": 1681.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-03-08 11:10",
+          "elo": 1687.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-03-08 12:04",
+          "elo": 1677.3,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-05 09:14",
+          "elo": 1684.8,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-05 10:06",
+          "elo": 1691.9,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-04-05 11:00",
+          "elo": 1681.4,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-09 12:15",
+          "elo": 1688.7,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-04-09 13:07",
+          "elo": 1692.9,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-04-12 12:03",
+          "elo": 1696.0,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-12 13:06",
+          "elo": 1701.7,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-16 11:32",
+          "elo": 1706.1,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-04-16 12:32",
+          "elo": 1697.4,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-04-18 09:14",
+          "elo": 1689.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-18 10:14",
+          "elo": 1695.0,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-04-18 11:10",
+          "elo": 1684.6,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-19 11:22",
+          "elo": 1690.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-04-19 12:17",
+          "elo": 1697.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-04-23 11:49",
+          "elo": 1705.3,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 0
+        },
+        {
+          "date": "2026-04-23 12:45",
+          "elo": 1694.8,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 0
+        },
+        {
+          "date": "2026-04-26 11:30",
+          "elo": 1684.8,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-26 12:20",
+          "elo": 1689.6,
+          "league": "LPL",
+          "rival": "Weibo Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-04-29 11:33",
+          "elo": 1695.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-04-29 12:35",
+          "elo": 1698.0,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-05-03 12:00",
+          "elo": 1701.3,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2026-05-03 13:04",
+          "elo": 1706.8,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 0
+        },
+        {
+          "date": "2026-05-03 14:00",
+          "elo": 1695.0,
+          "league": "LPL",
+          "rival": "Ninjas in Pyjamas",
+          "result": 1
+        },
+        {
+          "date": "2026-05-08 12:26",
+          "elo": 1700.8,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-05-08 13:29",
+          "elo": 1708.1,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-05-12 12:04",
+          "elo": 1715.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-05-12 13:03",
+          "elo": 1702.8,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-05-12 13:59",
+          "elo": 1708.1,
+          "league": "LPL",
+          "rival": "Invictus Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-05-15 11:19",
+          "elo": 1712.0,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-05-15 12:14",
+          "elo": 1719.2,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-05-17 12:31",
+          "elo": 1724.8,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-05-17 13:35",
+          "elo": 1730.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-05-30 09:50",
+          "elo": 1737.7,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-05-30 10:54",
+          "elo": 1724.0,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-05-30 11:55",
+          "elo": 1727.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-05-30 13:04",
+          "elo": 1714.0,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-06-03 09:17",
+          "elo": 1700.9,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-03 10:10",
+          "elo": 1704.0,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-03 11:02",
+          "elo": 1707.0,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-06 09:16",
+          "elo": 1709.9,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-06 10:19",
+          "elo": 1716.4,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-06-06 11:14",
+          "elo": 1706.6,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-06 12:14",
+          "elo": 1713.2,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-06-08 09:25",
+          "elo": 1718.3,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-06-08 10:30",
+          "elo": 1725.2,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-06-08 11:29",
+          "elo": 1730.5,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 08:30",
+          "elo": 1735.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 09:24",
+          "elo": 1739.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-06-13 10:21",
+          "elo": 1726.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-06-13 11:20",
+          "elo": 1713.9,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-06-13 12:26",
+          "elo": 1717.6,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 08:19",
+          "elo": 1721.3,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 09:14",
+          "elo": 1728.9,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-06-14 10:20",
+          "elo": 1734.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-04 06:21",
+          "elo": 1740.5,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-07-04 07:24",
+          "elo": 1724.9,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-07-04 08:13",
+          "elo": 1771.2,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-07-04 09:18",
+          "elo": 1815.0,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-07-04 10:12",
+          "elo": 1781.8,
+          "league": "MSI",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-07-06 03:13",
+          "elo": 1823.9,
+          "league": "MSI",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-07-06 04:05",
+          "elo": 1842.1,
+          "league": "MSI",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-07-06 04:54",
+          "elo": 1857.6,
+          "league": "MSI",
+          "rival": "LYON",
+          "result": 1
+        },
+        {
+          "date": "2026-07-09 08:12",
+          "elo": 1871.1,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-09 08:57",
+          "elo": 1898.7,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-09 09:45",
+          "elo": 1926.7,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-07-09 10:57",
+          "elo": 1885.7,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-12 07:27",
+          "elo": 1916.1,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-07-12 08:32",
+          "elo": 1874.8,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-12 09:24",
+          "elo": 1910.4,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-07-12 10:17",
+          "elo": 1934.1,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-07-12 11:11",
+          "elo": 1889.9,
+          "league": "MSI",
+          "rival": "Hanwha Life Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-07-23 12:51",
+          "elo": 1853.2,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-23 13:45",
+          "elo": 1854.6,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-07-23 14:38",
+          "elo": 1839.6,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-24 12:22",
+          "elo": 1841.1,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-07-24 13:23",
+          "elo": 1826.5,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-24 14:21",
+          "elo": 1828.6,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-26 11:33",
+          "elo": 1830.2,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-07-26 12:35",
+          "elo": 1833.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-07-26 13:35",
+          "elo": 1821.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-07-29 11:30",
+          "elo": 1826.0,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-29 12:34",
+          "elo": 1827.9,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-07-29 13:31",
+          "elo": 1813.2,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-07-31 09:09",
+          "elo": 1815.2,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-07-31 10:06",
+          "elo": 1818.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-08-01 12:04",
+          "elo": 1821.0,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-01 13:05",
+          "elo": 1823.7,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-07 12:49",
+          "elo": 1826.5,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-08-07 13:52",
+          "elo": 1814.2,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-08-08 11:57",
+          "elo": 1802.3,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-08 12:53",
+          "elo": 1804.1,
+          "league": "LPL",
+          "rival": "EDward Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-12 12:48",
+          "elo": 1805.4,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-12 13:41",
+          "elo": 1809.4,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-08-12 14:34",
+          "elo": 1796.3,
+          "league": "LPL",
+          "rival": "JD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-08-13 13:04",
+          "elo": 1784.6,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-13 13:58",
+          "elo": 1786.3,
+          "league": "LPL",
+          "rival": "ThunderTalk Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-15 13:09",
+          "elo": 1787.9,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-08-15 14:10",
+          "elo": 1791.9,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-08-20 12:18",
+          "elo": 1794.8,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 0
+        },
+        {
+          "date": "2026-08-20 13:15",
+          "elo": 1781.5,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-20 14:13",
+          "elo": 1784.5,
+          "league": "LPL",
+          "rival": "LGD Gaming",
+          "result": 1
+        },
+        {
+          "date": "2026-08-21 12:34",
+          "elo": 1786.8,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-21 13:23",
+          "elo": 1790.3,
+          "league": "LPL",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-08-23 12:28",
+          "elo": 1793.8,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-08-23 13:36",
+          "elo": 1782.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-08-23 14:45",
+          "elo": 1788.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-09-03 09:18",
+          "elo": 1792.1,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-09-03 10:12",
+          "elo": 1795.0,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-09-03 11:00",
+          "elo": 1797.8,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 0
+        },
+        {
+          "date": "2026-09-03 11:58",
+          "elo": 1784.5,
+          "league": "LPL",
+          "rival": "Team WE",
+          "result": 1
+        },
+        {
+          "date": "2026-09-07 09:12",
+          "elo": 1788.5,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-09-07 10:08",
+          "elo": 1793.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-09-07 11:05",
+          "elo": 1798.7,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-09-13 09:06",
+          "elo": 1802.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-09-13 10:04",
+          "elo": 1790.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-09-13 11:02",
+          "elo": 1779.4,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 1
+        },
+        {
+          "date": "2026-09-13 12:03",
+          "elo": 1785.1,
+          "league": "LPL",
+          "rival": "Anyone's Legend",
+          "result": 0
+        },
+        {
+          "date": "2026-10-23 19:12",
+          "elo": 1773.4,
+          "league": "WLDs",
+          "rival": "Movistar KOI",
+          "result": 0
+        },
+        {
+          "date": "2026-10-25 00:34",
+          "elo": 1725.9,
+          "league": "WLDs",
+          "rival": "Team Liquid",
+          "result": 1
+        },
+        {
+          "date": "2026-10-26 18:03",
+          "elo": 1754.2,
+          "league": "WLDs",
+          "rival": "Karmine Corp",
+          "result": 1
+        },
+        {
+          "date": "2026-10-29 22:38",
+          "elo": 1782.1,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-10-29 23:26",
+          "elo": 1801.7,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-10-30 00:24",
+          "elo": 1754.4,
+          "league": "WLDs",
+          "rival": "Top Esports",
+          "result": 0
+        },
+        {
+          "date": "2026-10-31 22:02",
+          "elo": 1720.0,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-10-31 23:05",
+          "elo": 1756.4,
+          "league": "WLDs",
+          "rival": "Hanwha Life Esports",
+          "result": 1
+        },
+        {
+          "date": "2026-11-05 22:13",
+          "elo": 1786.1,
+          "league": "WLDs",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-11-05 23:07",
+          "elo": 1813.7,
+          "league": "WLDs",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-11-06 00:00",
+          "elo": 1841.7,
+          "league": "WLDs",
+          "rival": "Dplus Kia",
+          "result": 1
+        },
+        {
+          "date": "2026-11-08 22:14",
+          "elo": 1864.8,
+          "league": "WLDs",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-11-08 23:04",
+          "elo": 1889.4,
+          "league": "WLDs",
+          "rival": "T1",
+          "result": 0
+        },
+        {
+          "date": "2026-11-08 23:57",
+          "elo": 1851.0,
+          "league": "WLDs",
+          "rival": "T1",
+          "result": 1
+        },
+        {
+          "date": "2026-11-09 00:56",
+          "elo": 1878.1,
+          "league": "WLDs",
+          "rival": "T1",
+          "result": 1
+        }
+      ],
+      "elo_actual": 1905.8,
+      "fecha_actual": "2026-11-09 00:56"
+    }
+  }
+}

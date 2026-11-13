@@ -1,0 +1,145 @@
+{
+  "modelo": "LightGBM calibrado (Platt). El modelo oficial de la predicción es el Elo (una sola feature).",
+  "unidad": "contribución al logit de la probabilidad",
+  "team_a": "Gen.G",
+  "team_b": "Bilibili Gaming",
+  "global": [
+    {
+      "grupo": "Elo",
+      "importancia": 0.3188,
+      "features": "elo_diff"
+    },
+    {
+      "grupo": "Ventaja temprana",
+      "importancia": 0.0683,
+      "features": "diff_golddiffat15_r10, diff_xpdiffat15_r10, diff_golddiffat15_r20, diff_xpdiffat15_r20"
+    },
+    {
+      "grupo": "Forma reciente",
+      "importancia": 0.0588,
+      "features": "diff_result_r10, diff_kills_pm_r10, diff_result_r20, diff_kills_pm_r20"
+    },
+    {
+      "grupo": "Objetivos tempranos",
+      "importancia": 0.0582,
+      "features": "diff_firstdragon_r10, diff_firstherald_r10, diff_firsttower_r10, diff_firstdragon_r20, diff_firstherald_r20, diff_firsttower_r20"
+    },
+    {
+      "grupo": "Muertes por minuto",
+      "importancia": 0.042,
+      "features": "diff_deaths_pm_r10, diff_deaths_pm_r20"
+    },
+    {
+      "grupo": "Daño por minuto",
+      "importancia": 0.0378,
+      "features": "diff_dpm_r10, diff_dpm_r20"
+    },
+    {
+      "grupo": "Duración de partidas",
+      "importancia": 0.0316,
+      "features": "diff_gamelength_r10, diff_gamelength_r20"
+    },
+    {
+      "grupo": "Primer pick",
+      "importancia": 0.0252,
+      "features": "blue_first_pick"
+    },
+    {
+      "grupo": "Tamaño de muestra",
+      "importancia": 0.006,
+      "features": "n_mapas_r10_blue, n_mapas_r10_red, n_mapas_r20_blue, n_mapas_r20_red, n_validos15_r10_blue, n_validos15_r10_red, n_validos15_r20_blue, n_validos15_r20_red"
+    }
+  ],
+  "matchup": [
+    {
+      "escenario": "Gen.G en azul (sin primer pick)",
+      "team_a_blue": true,
+      "team_a_first_pick": false,
+      "base_logit": 0.2735,
+      "p": 0.7213,
+      "contribuciones": [
+        {
+          "grupo": "Elo",
+          "shap": 0.4046
+        },
+        {
+          "grupo": "Forma reciente",
+          "shap": 0.1986
+        },
+        {
+          "grupo": "Primer pick",
+          "shap": -0.061
+        },
+        {
+          "grupo": "Duración de partidas",
+          "shap": 0.0474
+        },
+        {
+          "grupo": "Ventaja temprana",
+          "shap": 0.0464
+        },
+        {
+          "grupo": "Daño por minuto",
+          "shap": 0.0365
+        },
+        {
+          "grupo": "Tamaño de muestra",
+          "shap": 0.0083
+        },
+        {
+          "grupo": "Muertes por minuto",
+          "shap": -0.0063
+        },
+        {
+          "grupo": "Objetivos tempranos",
+          "shap": 0.003
+        }
+      ]
+    },
+    {
+      "escenario": "Gen.G en rojo (con primer pick)",
+      "team_a_blue": false,
+      "team_a_first_pick": true,
+      "base_logit": -0.2735,
+      "p": 0.5329,
+      "contribuciones": [
+        {
+          "grupo": "Elo",
+          "shap": 0.1984
+        },
+        {
+          "grupo": "Forma reciente",
+          "shap": 0.1223
+        },
+        {
+          "grupo": "Ventaja temprana",
+          "shap": 0.0459
+        },
+        {
+          "grupo": "Daño por minuto",
+          "shap": 0.0415
+        },
+        {
+          "grupo": "Muertes por minuto",
+          "shap": -0.0232
+        },
+        {
+          "grupo": "Objetivos tempranos",
+          "shap": 0.0177
+        },
+        {
+          "grupo": "Primer pick",
+          "shap": 0.0116
+        },
+        {
+          "grupo": "Duración de partidas",
+          "shap": -0.0091
+        },
+        {
+          "grupo": "Tamaño de muestra",
+          "shap": 0.0001
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+<svg
+  #svg
+  class="map"
+  viewBox="-665 -15 1330 1030"
+  preserveAspectRatio="xMidYMid meet"
+  role="group"
+  aria-label="Mapa táctico con los puntos de interés del tablero"
+  [class.reduced]="ui.reducedMotion()"
+  (pointerdown)="onPointer($event)"
+>
+  <defs>
+    <!-- Trazos de luz: dorado (Gen.G) → violeta → cian (BLG). -->
+    <linearGradient id="laneGrad" gradientUnits="userSpaceOnUse" [attr.x1]="baseA.x" [attr.y1]="baseA.y" [attr.x2]="baseB.x" [attr.y2]="baseB.y">
+      <stop offset="0" stop-color="#ffd98a" />
+      <stop offset="0.5" stop-color="#9d7bff" />
+      <stop offset="1" stop-color="#7ef0ff" />
+    </linearGradient>
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4bff" stop-opacity="0.15" />
+      <stop offset="0.5" stop-color="#6a7dff" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#3a4bff" stop-opacity="0.15" />
+    </linearGradient>
+    <radialGradient id="nexusA">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#e8b64c" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nexusB">
+      <stop offset="0" stop-color="#7ef0ff" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#23d5ff" stop-opacity="0" />
+    </radialGradient>
+    <!-- Región del filtro en coordenadas del mapa: con objectBoundingBox, una línea recta
+         (alto o ancho 0) recortaría su propio brillo. -->
+    <filter id="glow" filterUnits="userSpaceOnUse" x="-1100" y="-200" width="2200" height="1400">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+    <filter id="glowSoft" filterUnits="userSpaceOnUse" x="-1100" y="-200" width="2200" height="1400">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+    <linearGradient id="frontBand" gradientUnits="userSpaceOnUse" [attr.x1]="frontBand().gx1" [attr.y1]="frontBand().gy1" [attr.x2]="frontBand().gx2" [attr.y2]="frontBand().gy2">
+      <stop offset="0" stop-color="#e8b64c" stop-opacity="0" />
+      <stop offset="0.45" stop-color="#ffd98a" stop-opacity="0.85" />
+      <stop offset="0.55" stop-color="#7ef0ff" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#23d5ff" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="playerClip"><circle r="30" /></clipPath>
+    <clipPath id="diamond"><path [attr.d]="boundary" /></clipPath>
+    <path id="lane-top" [attr.d]="lanes.top" />
+    <path id="lane-mid" [attr.d]="lanes.mid" />
+    <path id="lane-bot" [attr.d]="lanes.bot" />
+  </defs>
+
+  <!-- Terreno -->
+  <g clip-path="url(#diamond)">
+    @if (useImage) {
+      <!-- Fondo: imagen cenital + velo oscuro para que se lean los textos. -->
+      <image [attr.href]="mapImage" x="0" y="0" width="100" height="100" preserveAspectRatio="none"
+             [attr.transform]="mapImageTransform" class="bg-img" />
+      <path [attr.d]="boundary" class="veil" />
+    } @else {
+      <path [attr.d]="boundary" class="ground" />
+    }
+    <!-- Territorio según P(serie): dorado hasta el frente, cian desde el frente. -->
+    <polygon [attr.points]="territory().gold" class="terr gold" [class.on-img]="useImage" />
+    <polygon [attr.points]="territory().cyan" class="terr cyan" [class.on-img]="useImage" />
+    @if (!useImage) {
+      @for (l of gridLines; track $index) {
+        <line [attr.x1]="l.x1" [attr.y1]="l.y1" [attr.x2]="l.x2" [attr.y2]="l.y2" class="grid" />
+      }
+      <!-- Río -->
+      <path [attr.d]="river" class="river-glow" filter="url(#glowSoft)" />
+      <path [attr.d]="river" class="river" />
+    }
+    <!-- Con imagen, el río y la jungla solo se dibujan como resaltado de su punto de interés. -->
+    @if (!useImage || hotLane() === 'river') {
+      <path [attr.d]="river" class="river-core" [class.hot]="hotLane() === 'river'" />
+    }
+    <!-- Jungla: campamentos abstractos (solo en el mapa sin imagen; en la imagen ya se ven). -->
+    @if (!useImage) {
+      @for (c of camps; track $index) {
+        <polygon
+          class="camp"
+          [class.hot]="hotLane() === 'jungle'"
+          [attr.points]="(c.x) + ',' + (c.y - 16) + ' ' + (c.x + 22) + ',' + c.y + ' ' + c.x + ',' + (c.y + 16) + ' ' + (c.x - 22) + ',' + c.y"
+        />
+      }
+    }
+    <!-- Fosos (con imagen ya se ven en el arte: solo un halo suave) -->
+    @for (p of pits; track $index) {
+      <ellipse [attr.cx]="p.x" [attr.cy]="p.y" rx="62" ry="36" class="pit-glow" filter="url(#glow)" />
+      @if (!useImage) {
+        <ellipse [attr.cx]="p.x" [attr.cy]="p.y" rx="52" ry="30" class="pit" />
+        <ellipse [attr.cx]="p.x" [attr.cy]="p.y" rx="28" ry="16" class="pit-inner" />
+      }
+    }
+  </g>
+  <path [attr.d]="boundary" class="edge" />
+
+  <!-- Líneas: solo se iluminan cuando su punto o un rol está activo (el arte ya las muestra). -->
+  @for (k of ['top', 'mid', 'bot']; track k) {
+    @if (hotLane() === k) {
+      <use [attr.href]="'#lane-' + k" class="lane-glow hot" filter="url(#glow)" />
+      <use [attr.href]="'#lane-' + k" class="lane hot" />
+    }
+  }
+
+  <!-- Frente de energía paralelo al río: su posición sale de P(serie) -->
+  @if (data.prediction()) {
+    <g class="front" aria-hidden="true">
+      <!-- Banda de energía dorado → cian, recortada al mapa. -->
+      <g clip-path="url(#diamond)">
+        <line [attr.x1]="frontBand().x1" [attr.y1]="frontBand().y1" [attr.x2]="frontBand().x2" [attr.y2]="frontBand().y2"
+              stroke="url(#frontBand)" stroke-width="40" class="front-glow" filter="url(#glowSoft)" />
+        <line [attr.x1]="frontBand().x1" [attr.y1]="frontBand().y1" [attr.x2]="frontBand().x2" [attr.y2]="frontBand().y2"
+              stroke="url(#frontBand)" stroke-width="8" class="front-band" />
+      </g>
+      <line [attr.x1]="fr().a.x" [attr.y1]="fr().a.y" [attr.x2]="fr().b.x" [attr.y2]="fr().b.y" class="front-line" />
+      <line [attr.x1]="fr().a.x" [attr.y1]="fr().a.y" [attr.x2]="fr().b.x" [attr.y2]="fr().b.y" class="front-dash" />
+      <!-- El número P(serie) vive fuera del mapa (panel bajo los botones, hud/dock.ts). -->
+    </g>
+  }
+
+  <!-- Bases: logo de cada equipo sobre su nexo (Gen.G abajo-izq., BLG arriba-der.) -->
+  @for (n of [{ at: baseA, cls: 'gold', grad: 'nexusA', team: teamA() }, { at: baseB, cls: 'cyan', grad: 'nexusB', team: teamB() }]; track n.cls) {
+    <g [class]="'nexus ' + n.cls" [attr.transform]="'translate(' + n.at.x + ',' + n.at.y + ')'">
+      <circle r="78" [attr.fill]="'url(#' + n.grad + ')'" class="nexus-aura" />
+      @if (useImage && n.team) {
+        <image [attr.href]="logo(n.team)" x="-66" y="-52" width="132" height="104"
+               preserveAspectRatio="xMidYMid meet" class="nexus-logo" [attr.aria-label]="n.team" role="img" />
+      } @else {
+        <text y="12" text-anchor="middle" class="nexus-label">{{ short(n.team) }}</text>
+      }
+    </g>
+  }
+
+  <!-- Jugadores: círculo con la foto (si hay) y la letra del rol T/J/M/B/S. -->
+  @for (m of markers(); track m.side + m.role) {
+    <g
+      class="player"
+      [class]="'player ' + (m.side === 'a' ? 'gold' : 'cyan')"
+      [class.hot]="ui.hoveredRole() === m.role || ui.spotRole() === m.role || (ui.spotRole() === 'bot' && m.role === 'sup') || (ui.spotRole() === 'sup' && m.role === 'bot')"
+      [class.dim]="!!ui.spotRole() && ui.spotRole() !== m.role && !(ui.spotRole() === 'bot' && m.role === 'sup') && !(ui.spotRole() === 'sup' && m.role === 'bot')"
+      [class.has-photo]="!!m.photo"
+      [attr.transform]="'translate(' + m.at.x + ',' + m.at.y + ')'"
+      tabindex="0"
+      role="button"
+      [attr.aria-label]="(m.name || m.team) + ' · ' + roleLabel[m.role] + ' · ' + m.team"
+      (pointerdown)="selectPlayer(m.role, $event)"
+      (keydown.enter)="selectPlayer(m.role, $event)"
+      (mouseenter)="ui.hoveredRole.set(m.role)"
+      (mouseleave)="ui.hoveredRole.set(null)"
+    >
+      <title>{{ m.name }} · {{ roleLabel[m.role] }} · {{ m.team }}</title>
+      <g class="player-body">
+        <circle r="30" class="player-dot" />
+        @if (m.photo) {
+          <image [attr.href]="m.photo" x="-30" y="-30" width="60" height="60" clip-path="url(#playerClip)"
+                 preserveAspectRatio="xMidYMid slice" class="player-photo" />
+          <circle r="30" class="player-ring" />
+          <g transform="translate(21,21)" class="player-badge">
+            <circle r="12" />
+            <text text-anchor="middle" dy="0.36em">{{ m.letter }}</text>
+          </g>
+        } @else {
+          <text class="player-letter" text-anchor="middle" dy="0.36em">{{ m.letter }}</text>
+        }
+      </g>
+      @if (m.name) {
+        <text class="player-name" text-anchor="middle" y="52">{{ m.name }}</text>
+      }
+    </g>
+  }
+
+  <!-- Punto de interés activo (los botones están al costado del mapa). -->
+  @if (ui.active(); as p) {
+    <g [class]="'poi-mark ' + p.accent" [attr.transform]="'translate(' + p.at.x + ',' + p.at.y + ')'" aria-hidden="true">
+      <circle r="40" class="poi-pulse" />
+      <circle r="24" class="poi-ring" />
+    </g>
+  }
+
+  <!-- Pings -->
+  @for (p of pings(); track p.id) {
+    <circle [attr.cx]="p.x" [attr.cy]="p.y" [attr.r]="60 * pingScale()" class="ping" />
+  }
+</svg>

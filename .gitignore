@@ -1,0 +1,21 @@
+# Entornos y dependencias
+.venv/
+web/node_modules/
+web/.angular/
+web/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Logs del instalador
+instalar_log.txt
+
+# Secretos
+.env
+.env.*
+
+# Datos crudos (más de 100 MB por archivo; se descargan de Oracle's Elixir)
+data/raw/*.csv
+# Salidas regenerables del pipeline
+data/processed/
+models/

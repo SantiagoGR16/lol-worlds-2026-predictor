@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "league": "WLDs",
+    "year": 2026,
+    "patches": [
+      "16.17",
+      "16.20"
+    ],
+    "maps": 106,
+    "nota": "Stats ponderadas por el Elo previo del rival; mvp_score = media de z-scores dentro del rol."
+  },
+  "players": [
+    {
+      "team": "Bilibili Gaming",
+      "player": "Bin",
+      "role": "top",
+      "maps": 15,
+      "kda": 4.1528,
+      "kp": 0.5172,
+      "dpm": 425.7236,
+      "gd15": 190.1528,
+      "dmg_share": 0.1824,
+      "mvp_score": -0.0449,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Bilibili Gaming",
+      "player": "Xun",
+      "role": "jng",
+      "maps": 15,
+      "kda": 5.6649,
+      "kp": 0.7243,
+      "dpm": 399.8792,
+      "gd15": 251.7302,
+      "dmg_share": 0.1718,
+      "mvp_score": 0.3823,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Bilibili Gaming",
+      "player": "Knight",
+      "role": "mid",
+      "maps": 15,
+      "kda": 9.3367,
+      "kp": 0.7598,
+      "dpm": 666.3769,
+      "gd15": 350.0816,
+      "dmg_share": 0.2772,
+      "mvp_score": 1.5113,
+      "mvp_candidate": true
+    },
+    {
+      "team": "Bilibili Gaming",
+      "player": "Viper",
+      "role": "bot",
+      "maps": 15,
+      "kda": 4.7773,
+      "kp": 0.6834,
+      "dpm": 709.3935,
+      "gd15": -84.8413,
+      "dmg_share": 0.296,
+      "mvp_score": 0.2077,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Bilibili Gaming",
+      "player": "ON",
+      "role": "sup",
+      "maps": 15,
+      "kda": 3.6251,
+      "kp": 0.716,
+      "dpm": 169.734,
+      "gd15": -90.4461,
+      "dmg_share": 0.0726,
+      "mvp_score": -0.2345,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Gen.G",
+      "player": "Kiin",
+      "role": "top",
+      "maps": 11,
+      "kda": 7.4722,
+      "kp": 0.6106,
+      "dpm": 655.1552,
+      "gd15": 319.6151,
+      "dmg_share": 0.243,
+      "mvp_score": 1.7844,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Gen.G",
+      "player": "Canyon",
+      "role": "jng",
+      "maps": 11,
+      "kda": 9.6094,
+      "kp": 0.7436,
+      "dpm": 566.2953,
+      "gd15": 576.6118,
+      "dmg_share": 0.2083,
+      "mvp_score": 1.9167,
+      "mvp_candidate": true
+    },
+    {
+      "team": "Gen.G",
+      "player": "Chovy",
+      "role": "mid",
+      "maps": 11,
+      "kda": 6.3558,
+      "kp": 0.6503,
+      "dpm": 606.1827,
+      "gd15": -91.2996,
+      "dmg_share": 0.2219,
+      "mvp_score": -0.0145,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Gen.G",
+      "player": "Ruler",
+      "role": "bot",
+      "maps": 11,
+      "kda": 7.6391,
+      "kp": 0.7394,
+      "dpm": 729.9451,
+      "gd15": -58.18,
+      "dmg_share": 0.2636,
+      "mvp_score": 0.5797,
+      "mvp_candidate": false
+    },
+    {
+      "team": "Gen.G",
+      "player": "Duro",
+      "role": "sup",
+      "maps": 11,
+      "kda": 5.0595,
+      "kp": 0.7061,
+      "dpm": 174.3077,
+      "gd15": 32.5522,
+      "dmg_share": 0.0634,
+      "mvp_score": 0.1207,
+      "mvp_candidate": false
+    }
+  ]
+}

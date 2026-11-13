@@ -1,0 +1,273 @@
+{
+  "mejor_modelo": "elo (none)",
+  "regla": "Mejor log-loss en el WLDs 2025; el 2026 solo se usa para evaluar.",
+  "modelos_mapa": [
+    {
+      "mundial": "WLDs 2025",
+      "modelo": "(a) Solo Elo",
+      "calibration": "none",
+      "n_train": 2386,
+      "n": 96,
+      "log_loss": 0.6557,
+      "brier": 0.2328,
+      "accuracy": 0.5521
+    },
+    {
+      "mundial": "WLDs 2025",
+      "modelo": "(b) Regresión logística",
+      "calibration": "sigmoid",
+      "n_train": 2386,
+      "n": 96,
+      "log_loss": 0.6562,
+      "brier": 0.2327,
+      "accuracy": 0.5625
+    },
+    {
+      "mundial": "WLDs 2025",
+      "modelo": "(c) LightGBM",
+      "calibration": "sigmoid",
+      "n_train": 2386,
+      "n": 96,
+      "log_loss": 0.7009,
+      "brier": 0.2539,
+      "accuracy": 0.4896
+    },
+    {
+      "mundial": "WLDs 2026",
+      "modelo": "(a) Solo Elo",
+      "calibration": "none",
+      "n_train": 4855,
+      "n": 106,
+      "log_loss": 0.6455,
+      "brier": 0.2278,
+      "accuracy": 0.5943
+    },
+    {
+      "mundial": "WLDs 2026",
+      "modelo": "(b) Regresión logística",
+      "calibration": "sigmoid",
+      "n_train": 4855,
+      "n": 106,
+      "log_loss": 0.6459,
+      "brier": 0.2277,
+      "accuracy": 0.6132
+    },
+    {
+      "mundial": "WLDs 2026",
+      "modelo": "(c) LightGBM",
+      "calibration": "sigmoid",
+      "n_train": 4855,
+      "n": 106,
+      "log_loss": 0.6591,
+      "brier": 0.2336,
+      "accuracy": 0.6132
+    }
+  ],
+  "backtest_series": [
+    {
+      "grupo": "Todas",
+      "n": 443,
+      "log_loss": 0.6571,
+      "brier": 0.2259,
+      "accuracy": 0.6388,
+      "p_media_fav": 0.6829,
+      "fav_gana": 0.6388,
+      "barridas_pred": 0.3043,
+      "barridas_real": 0.3657
+    },
+    {
+      "grupo": "2025",
+      "n": 200,
+      "log_loss": 0.6252,
+      "brier": 0.2144,
+      "accuracy": 0.655,
+      "p_media_fav": 0.6872,
+      "fav_gana": 0.655,
+      "barridas_pred": 0.2753,
+      "barridas_real": 0.305
+    },
+    {
+      "grupo": "2026 (sin Mundial 2026)",
+      "n": 228,
+      "log_loss": 0.6828,
+      "brier": 0.2342,
+      "accuracy": 0.636,
+      "p_media_fav": 0.6807,
+      "fav_gana": 0.636,
+      "barridas_pred": 0.3289,
+      "barridas_real": 0.4167
+    },
+    {
+      "grupo": "Internacionales (MSI + Mundial 2025)",
+      "n": 50,
+      "log_loss": 0.6248,
+      "brier": 0.2165,
+      "accuracy": 0.64,
+      "p_media_fav": 0.6566,
+      "fav_gana": 0.64,
+      "barridas_pred": 0.2906,
+      "barridas_real": 0.4
+    },
+    {
+      "grupo": "WLDs 2026",
+      "n": 15,
+      "log_loss": 0.6934,
+      "brier": 0.2539,
+      "accuracy": 0.4667,
+      "p_media_fav": 0.6583,
+      "fav_gana": 0.4667,
+      "barridas_pred": 0.3158,
+      "barridas_real": 0.4
+    }
+  ],
+  "variantes_series": [
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "variante": "estático",
+      "n_series": 411,
+      "log_loss": 0.6524,
+      "brier": 0.2232,
+      "nll_marcador": 1.7321,
+      "dif_vs_estatico": 0.0,
+      "se_dif": 0.0
+    },
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "variante": "recalibración",
+      "n_series": 411,
+      "log_loss": 0.6375,
+      "brier": 0.2218,
+      "nll_marcador": 1.7173,
+      "dif_vs_estatico": -0.0149,
+      "se_dif": 0.0105
+    },
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "variante": "forma del día",
+      "n_series": 411,
+      "log_loss": 0.638,
+      "brier": 0.2214,
+      "nll_marcador": 1.6996,
+      "dif_vs_estatico": -0.0144,
+      "se_dif": 0.0084
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "variante": "estático",
+      "n_series": 15,
+      "log_loss": 0.6934,
+      "brier": 0.2539,
+      "nll_marcador": 1.7,
+      "dif_vs_estatico": 0.0,
+      "se_dif": 0.0
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "variante": "recalibración",
+      "n_series": 15,
+      "log_loss": 0.6639,
+      "brier": 0.2378,
+      "nll_marcador": 1.6704,
+      "dif_vs_estatico": -0.0296,
+      "se_dif": 0.0352
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "variante": "forma del día",
+      "n_series": 15,
+      "log_loss": 0.6743,
+      "brier": 0.2433,
+      "nll_marcador": 1.6363,
+      "dif_vs_estatico": -0.0191,
+      "se_dif": 0.0276
+    }
+  ],
+  "barridas": [
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "n_series": 411,
+      "barridas_real": 0.3674,
+      "se_real": 0.0238,
+      "pred_estático": 0.3028,
+      "pred_recalibración": 0.2921,
+      "pred_forma del día": 0.3809
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "n_series": 15,
+      "barridas_real": 0.4,
+      "se_real": 0.1309,
+      "pred_estático": 0.3158,
+      "pred_recalibración": 0.3068,
+      "pred_forma del día": 0.3972
+    }
+  ],
+  "momentum_bo5": [
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "esperado_por": "elo_actualizado",
+      "n_mapas": 1190,
+      "n_series": 411,
+      "real": 0.5504,
+      "esperado": 0.5401,
+      "residual": 0.0104,
+      "se": 0.014,
+      "se_cluster": 0.014
+    },
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "esperado_por": "estatico",
+      "n_mapas": 1190,
+      "n_series": 411,
+      "real": 0.5504,
+      "esperado": 0.5184,
+      "residual": 0.0321,
+      "se": 0.0141,
+      "se_cluster": 0.0143
+    },
+    {
+      "grupo": "Bo5 previos al Mundial 2026",
+      "esperado_por": "forma_del_dia",
+      "n_mapas": 1190,
+      "n_series": 411,
+      "real": 0.5504,
+      "esperado": 0.5598,
+      "residual": -0.0094,
+      "se": 0.014,
+      "se_cluster": 0.0137
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "esperado_por": "elo_actualizado",
+      "n_mapas": 40,
+      "n_series": 15,
+      "real": 0.6,
+      "esperado": 0.6099,
+      "residual": -0.0099,
+      "se": 0.0772,
+      "se_cluster": 0.0647
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "esperado_por": "estatico",
+      "n_mapas": 40,
+      "n_series": 15,
+      "real": 0.6,
+      "esperado": 0.5364,
+      "residual": 0.0636,
+      "se": 0.0793,
+      "se_cluster": 0.068
+    },
+    {
+      "grupo": "Bo5 WLDs 2026",
+      "esperado_por": "forma_del_dia",
+      "n_mapas": 40,
+      "n_series": 15,
+      "real": 0.6,
+      "esperado": 0.5819,
+      "residual": 0.0181,
+      "se": 0.0775,
+      "se_cluster": 0.0654
+    }
+  ]
+}

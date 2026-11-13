@@ -1,0 +1,374 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.ground {
+  fill: rgba(18, 24, 40, 0.55);
+}
+// Fondo con imagen: un poco desaturada y con velo para que manden las luces del tablero.
+.bg-img {
+  filter: saturate(0.95) brightness(1.05);
+}
+.veil {
+  fill: rgba(5, 7, 13, 0.2);
+}
+.terr {
+  opacity: 0.07;
+  &.on-img {
+    opacity: 0.1;
+  }
+  &.gold {
+    fill: #e8b64c;
+  }
+  &.cyan {
+    fill: #23d5ff;
+  }
+}
+.grid {
+  stroke: rgba(160, 175, 210, 0.08);
+  stroke-width: 1;
+}
+.edge {
+  fill: none;
+  stroke: rgba(157, 123, 255, 0.45);
+  stroke-width: 2;
+}
+
+.river-glow {
+  fill: none;
+  stroke: #4c5cff;
+  stroke-opacity: 0.25;
+  stroke-width: 90;
+}
+.river {
+  fill: none;
+  stroke: url(#riverGrad);
+  stroke-width: 46;
+  stroke-linecap: round;
+}
+.river-core {
+  fill: none;
+  stroke: #9fb0ff;
+  stroke-opacity: 0.35;
+  stroke-width: 2;
+  stroke-dasharray: 10 14;
+  animation: flow 3s linear infinite;
+  &.hot {
+    stroke-opacity: 0.9;
+  }
+}
+
+.camp {
+  fill: rgba(157, 123, 255, 0.08);
+  stroke: rgba(157, 123, 255, 0.45);
+  stroke-width: 1.5;
+  transition: fill 0.3s, stroke 0.3s;
+  &.hot {
+    fill: rgba(157, 123, 255, 0.3);
+    stroke: #c9b6ff;
+  }
+}
+
+.pit-glow {
+  fill: #6a7dff;
+  opacity: 0.25;
+}
+.pit {
+  fill: rgba(5, 7, 13, 0.8);
+  stroke: #9fb0ff;
+  stroke-width: 2;
+}
+.pit-inner {
+  fill: none;
+  stroke: rgba(159, 176, 255, 0.5);
+  stroke-dasharray: 4 6;
+}
+
+.lane-glow {
+  fill: none;
+  stroke: url(#laneGrad);
+  stroke-width: 16;
+  stroke-opacity: 0.35;
+  stroke-linejoin: round;
+  transition: stroke-opacity 0.3s, stroke-width 0.3s;
+  &.hot {
+    stroke-opacity: 0.85;
+    stroke-width: 26;
+  }
+}
+.lane {
+  fill: none;
+  stroke: url(#laneGrad);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  &.hot {
+    stroke-width: 5;
+  }
+}
+
+// Logos de equipo junto a cada nexo.
+.nexus-logo {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.85));
+  pointer-events: none;
+}
+
+// Círculos de jugador (T/J/M/B/S).
+.player {
+  cursor: pointer;
+  outline: none;
+  // Tonos del equipo: oscuros para el relleno (letra blanca con contraste AA), vivos para el aro.
+  --dark: #94690f;
+  --ring: #ffd98a;
+  &.cyan {
+    --dark: #0b6f8c;
+    --ring: #7ef0ff;
+  }
+  .player-body {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.2s;
+  }
+  .player-dot {
+    fill: var(--dark);
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 3;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.7));
+  }
+  // Con foto: fondo claro detrás del recorte y aro del color del equipo.
+  &.has-photo .player-dot {
+    fill: #e9edf6;
+    stroke: none;
+  }
+  .player-photo {
+    pointer-events: none;
+  }
+  .player-ring {
+    fill: none;
+    stroke: var(--ring);
+    stroke-width: 4;
+  }
+  .player-badge {
+    pointer-events: none;
+    circle {
+      fill: var(--dark);
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+    text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      fill: #ffffff;
+    }
+  }
+  .player-letter {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    fill: #ffffff;
+    pointer-events: none;
+  }
+  .player-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    fill: #ffffff;
+    paint-order: stroke;
+    stroke: rgba(5, 7, 13, 0.9);
+    stroke-width: 5px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  &:hover,
+  &:focus-visible,
+  &.hot {
+    .player-body {
+      transform: scale(1.18);
+    }
+    .player-name {
+      opacity: 1;
+    }
+  }
+  // Con un rol destacado, los demás jugadores pasan a segundo plano.
+  transition: opacity 0.25s;
+  &.dim {
+    opacity: 0.35;
+  }
+  &:focus-visible .player-ring,
+  &:focus-visible .player-dot {
+    stroke: #c9b6ff;
+  }
+}
+
+.spark {
+  &.gold {
+    fill: #ffd98a;
+    filter: drop-shadow(0 0 6px #e8b64c);
+  }
+  &.cyan {
+    fill: #7ef0ff;
+    filter: drop-shadow(0 0 6px #23d5ff);
+  }
+}
+
+.front-glow {
+  opacity: 0.25;
+}
+// Línea divisoria discreta: que se vea el mapa, no la línea.
+.front-band {
+  opacity: 0.45;
+}
+.front-line {
+  stroke: #ffffff;
+  stroke-opacity: 0.3;
+  stroke-width: 1.5;
+}
+.front-dash {
+  stroke: #ffffff;
+  stroke-opacity: 0.35;
+  stroke-width: 1.5;
+  stroke-dasharray: 6 18;
+  animation: flow 1.6s linear infinite;
+}
+.front-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  fill: #ffd98a;
+  paint-order: stroke;
+  stroke: #05070d;
+  stroke-width: 8px;
+  filter: drop-shadow(0 0 18px rgba(232, 182, 76, 0.55));
+}
+.front-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  fill: #d5dae5;
+  paint-order: stroke;
+  stroke: #05070d;
+  stroke-width: 5px;
+  letter-spacing: 0.06em;
+}
+
+.nexus-aura {
+  animation: pulse 2.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.nexus.gold {
+  .nexus-label {
+    fill: #ffd98a;
+  }
+}
+.nexus.cyan {
+  .nexus-label {
+    fill: #7ef0ff;
+  }
+}
+.nexus-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.12em;
+}
+
+// Marca del punto de interés activo (los botones viven fuera del mapa).
+.poi-mark {
+  --c: #9d7bff;
+  pointer-events: none;
+  &.gold {
+    --c: #e8b64c;
+  }
+  &.cyan {
+    --c: #23d5ff;
+  }
+  .poi-pulse {
+    fill: none;
+    stroke: var(--c);
+    stroke-width: 3;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ring 2.4s ease-out infinite;
+  }
+  .poi-ring {
+    fill: color-mix(in srgb, var(--c) 25%, transparent);
+    stroke: var(--c);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 10px var(--c));
+  }
+}
+
+.ping {
+  fill: none;
+  stroke: #c9b6ff;
+  stroke-width: 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ping 0.9s ease-out forwards;
+}
+
+.reduced {
+  .poi-pulse,
+  .nexus-aura,
+  .river-core,
+  .front-dash {
+    animation: none;
+  }
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes ring {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes ping {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

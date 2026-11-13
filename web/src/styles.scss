@@ -1,0 +1,285 @@
+// Tablero táctico: estilos globales y tokens.
+// Fuentes autoalojadas (@fontsource, ver angular.json): Space Grotesk, Inter y JetBrains Mono.
+
+:root {
+  --bg: #05070d;
+  --ink: #e9edf6;
+  --ink-2: #b4bccd; // contraste AA sobre --bg y sobre las tarjetas
+  --ink-3: #8a93a8;
+  --line: rgba(160, 175, 210, 0.16);
+
+  --gold: #e8b64c;
+  --gold-2: #ffd98a;
+  --cyan: #23d5ff;
+  --cyan-2: #7ef0ff;
+  --violet: #9d7bff;
+  --violet-2: #c9b6ff;
+  --danger: #ff6b7a;
+
+  --glass: rgba(15, 20, 32, 0.7);
+  --radius: 16px;
+
+  --f-title: 'Space Grotesk', system-ui, sans-serif;
+  --f-text: 'Inter', system-ui, sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-text);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--f-title);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.mono,
+.num {
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--violet-2);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// ---------------------------------------------------------------------------
+// Fondo: grilla sutil que "respira" + viñeta
+// ---------------------------------------------------------------------------
+.backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 78%);
+    animation: breathe 9s ease-in-out infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 18% 55%, rgba(232, 182, 76, 0.08), transparent 45%),
+      radial-gradient(ellipse at 82% 45%, rgba(35, 213, 255, 0.08), transparent 45%),
+      radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.75) 100%);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.015);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Cristal
+// ---------------------------------------------------------------------------
+.glass {
+  --glow: var(--violet);
+  background: var(--glass);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid color-mix(in srgb, var(--glow) 45%, transparent);
+  border-radius: var(--radius);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 0 32px -6px color-mix(in srgb, var(--glow) 45%, transparent),
+    0 20px 60px -20px rgba(0, 0, 0, 0.8);
+
+  &.gold {
+    --glow: var(--gold);
+  }
+  &.cyan {
+    --glow: var(--cyan);
+  }
+  &.violet {
+    --glow: var(--violet);
+  }
+}
+
+.panel {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+}
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.note {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+.gold-text {
+  color: var(--gold-2);
+}
+.cyan-text {
+  color: var(--cyan-2);
+}
+.violet-text {
+  color: var(--violet-2);
+}
+
+// Insignia propia (siglas) con el color del equipo: no se usan logos.
+.badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 42px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 7px;
+  font-family: var(--f-title);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+
+  &.gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-2));
+    color: #1b1303;
+  }
+  &.cyan {
+    background: linear-gradient(135deg, var(--cyan), var(--cyan-2));
+    color: #021a21;
+  }
+}
+
+// Tablas compactas de datos.
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+
+  th,
+  td {
+    padding: 6px 8px;
+    text-align: right;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+  th {
+    font-family: var(--f-mono);
+    font-weight: 400;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  td {
+    font-family: var(--f-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  tr.hl td {
+    color: var(--violet-2);
+  }
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+// Grupo de botones tipo interruptor.
+.toggle {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+
+  button {
+    border: 0;
+    background: transparent;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--ink-2);
+
+    &[aria-pressed='true'] {
+      background: color-mix(in srgb, var(--violet) 30%, transparent);
+      color: var(--ink);
+    }
+  }
+}
+
+// Reducción de movimiento: sin animaciones grandes.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

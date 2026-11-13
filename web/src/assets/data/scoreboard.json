@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "league": "WLDs",
+    "year": 2026,
+    "data_date": "2026-11-09",
+    "ref_length_s": 1971.9615,
+    "sigma": 0.8386,
+    "nota": "Promedios reales del torneo. K/D/A, daño, oro, CS y wards: por minuto, escalados a la duración media de los mapas de ambos finalistas. KP, GPM y visión/min: sobre totales. Mapas: P(se juega) y P(gana | se juega) con la regla de lados y la forma del día de la predicción."
+  },
+  "team_a": "Gen.G",
+  "team_b": "Bilibili Gaming",
+  "maps": [
+    {
+      "map": 1,
+      "p_played": 1.0,
+      "p_a_win_if_played": 0.6032
+    },
+    {
+      "map": 2,
+      "p_played": 1.0,
+      "p_a_win_if_played": 0.6063
+    },
+    {
+      "map": 3,
+      "p_played": 1.0,
+      "p_a_win_if_played": 0.6064
+    },
+    {
+      "map": 4,
+      "p_played": 0.604,
+      "p_a_win_if_played": 0.582
+    },
+    {
+      "map": 5,
+      "p_played": 0.2605,
+      "p_a_win_if_played": 0.567
+    }
+  ],
+  "teams": {
+    "Gen.G": {
+      "teamid": "oe:team:50f58982d91a36557ec8aec52ab014f",
+      "maps": 11,
+      "wins": 10,
+      "losses": 1,
+      "avg_length_s": 1879.2727,
+      "first_blood": 0.5455,
+      "per_game": {
+        "kills": 18.8182,
+        "deaths": 9.3636,
+        "towers": 8.8182,
+        "dragons": 3.1818,
+        "barons": 0.9091,
+        "void_grubs": 1.1818,
+        "totalgold": 65787.6364
+      },
+      "players": [
+        {
+          "player": "Kiin",
+          "role": "top",
+          "maps": 11,
+          "wins": 10,
+          "kills": 3.9111,
+          "deaths": 1.6217,
+          "assists": 8.1084,
+          "kda": 7.4118,
+          "kp": 0.6087,
+          "dmg": 21405.3029,
+          "gold": 13577.5543,
+          "gpm": 413.1182,
+          "cs": 276.3532,
+          "cs15": 136.9091,
+          "vspm": 1.4396,
+          "wards_placed": 14.1181,
+          "wards_killed": 8.2992,
+          "champions": [
+            {
+              "champion": "Camille",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Olaf",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Rumble",
+              "n": 2,
+              "wins": 1
+            },
+            {
+              "champion": "Ambessa",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Canyon",
+          "role": "jng",
+          "maps": 11,
+          "wins": 10,
+          "kills": 4.1019,
+          "deaths": 1.5263,
+          "assists": 10.5886,
+          "kda": 9.625,
+          "kp": 0.744,
+          "dmg": 18414.5454,
+          "gold": 15234.0516,
+          "gpm": 463.5197,
+          "cs": 274.0637,
+          "cs15": 128.5455,
+          "vspm": 1.994,
+          "wards_placed": 12.4965,
+          "wards_killed": 13.2596,
+          "champions": [
+            {
+              "champion": "Qiyana",
+              "n": 5,
+              "wins": 4
+            },
+            {
+              "champion": "Jarvan IV",
+              "n": 1,
+              "wins": 1
+            },
+            {
+              "champion": "Jayce",
+              "n": 1,
+              "wins": 1
+            },
+            {
+              "champion": "Lee Sin",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Chovy",
+          "role": "mid",
+          "maps": 11,
+          "wins": 10,
+          "kills": 4.3881,
+          "deaths": 2.0033,
+          "assists": 8.49,
+          "kda": 6.4286,
+          "kp": 0.6522,
+          "dmg": 19995.4916,
+          "gold": 13907.1366,
+          "gpm": 423.1463,
+          "cs": 296.7672,
+          "cs15": 153.3636,
+          "vspm": 1.7589,
+          "wards_placed": 14.6905,
+          "wards_killed": 13.1642,
+          "champions": [
+            {
+              "champion": "Galio",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Taliyah",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Ahri",
+              "n": 1,
+              "wins": 1
+            },
+            {
+              "champion": "Akali",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Ruler",
+          "role": "bot",
+          "maps": 11,
+          "wins": 10,
+          "kills": 6.0098,
+          "deaths": 1.9079,
+          "assists": 8.5854,
+          "kda": 7.65,
+          "kp": 0.7391,
+          "dmg": 24327.1867,
+          "gold": 17461.3798,
+          "gpm": 531.2897,
+          "cs": 326.5298,
+          "cs15": 138.7273,
+          "vspm": 1.5006,
+          "wards_placed": 16.7891,
+          "wards_killed": 11.3518,
+          "champions": [
+            {
+              "champion": "Ashe",
+              "n": 3,
+              "wins": 3
+            },
+            {
+              "champion": "Jhin",
+              "n": 3,
+              "wins": 2
+            },
+            {
+              "champion": "Ezreal",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Corki",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Duro",
+          "role": "sup",
+          "maps": 11,
+          "wins": 10,
+          "kills": 1.3355,
+          "deaths": 2.7664,
+          "assists": 12.5919,
+          "kda": 5.0345,
+          "kp": 0.7053,
+          "dmg": 5532.4053,
+          "gold": 8852.2681,
+          "gpm": 269.344,
+          "cs": 31.1935,
+          "cs15": 19.4545,
+          "vspm": 4.4321,
+          "wards_placed": 72.0216,
+          "wards_killed": 13.7366,
+          "champions": [
+            {
+              "champion": "Leona",
+              "n": 3,
+              "wins": 3
+            },
+            {
+              "champion": "Nautilus",
+              "n": 3,
+              "wins": 3
+            },
+            {
+              "champion": "Seraphine",
+              "n": 3,
+              "wins": 3
+            },
+            {
+              "champion": "Rakan",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        }
+      ]
+    },
+    "Bilibili Gaming": {
+      "teamid": "oe:team:d356a144644879dabb5f34cd99c886d",
+      "maps": 15,
+      "wins": 11,
+      "losses": 4,
+      "avg_length_s": 2039.9333,
+      "first_blood": 0.6667,
+      "per_game": {
+        "kills": 16.1333,
+        "deaths": 10.9333,
+        "towers": 7.8667,
+        "dragons": 3.1333,
+        "barons": 0.8,
+        "void_grubs": 1.4,
+        "totalgold": 68164.3333
+      },
+      "players": [
+        {
+          "player": "Bin",
+          "role": "top",
+          "maps": 15,
+          "wins": 11,
+          "kills": 3.3512,
+          "deaths": 1.9334,
+          "assists": 4.7045,
+          "kda": 4.1667,
+          "kp": 0.5165,
+          "dmg": 14030.4493,
+          "gold": 12972.9665,
+          "gpm": 394.7227,
+          "cs": 275.8903,
+          "cs15": 136.8667,
+          "vspm": 1.3451,
+          "wards_placed": 13.9846,
+          "wards_killed": 6.509,
+          "champions": [
+            {
+              "champion": "Gnar",
+              "n": 4,
+              "wins": 4
+            },
+            {
+              "champion": "Ambessa",
+              "n": 4,
+              "wins": 2
+            },
+            {
+              "champion": "Camille",
+              "n": 2,
+              "wins": 1
+            },
+            {
+              "champion": "K'Sante",
+              "n": 2,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Xun",
+          "role": "jng",
+          "maps": 15,
+          "wins": 11,
+          "kills": 3.3512,
+          "deaths": 1.9978,
+          "assists": 7.9268,
+          "kda": 5.6452,
+          "kp": 0.7231,
+          "dmg": 13005.5114,
+          "gold": 13411.5167,
+          "gpm": 408.0663,
+          "cs": 237.9965,
+          "cs15": 120.4,
+          "vspm": 1.7236,
+          "wards_placed": 12.7602,
+          "wards_killed": 10.3112,
+          "champions": [
+            {
+              "champion": "Lee Sin",
+              "n": 3,
+              "wins": 3
+            },
+            {
+              "champion": "Pantheon",
+              "n": 3,
+              "wins": 2
+            },
+            {
+              "champion": "Naafiri",
+              "n": 2,
+              "wins": 2
+            },
+            {
+              "champion": "Jarvan IV",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Knight",
+          "role": "mid",
+          "maps": 15,
+          "wins": 11,
+          "kills": 4.769,
+          "deaths": 1.2889,
+          "assists": 7.089,
+          "kda": 9.2,
+          "kp": 0.7603,
+          "dmg": 22302.8405,
+          "gold": 14767.5101,
+          "gpm": 449.3245,
+          "cs": 305.2129,
+          "cs15": 151.4667,
+          "vspm": 1.6197,
+          "wards_placed": 11.9224,
+          "wards_killed": 13.4691,
+          "champions": [
+            {
+              "champion": "Orianna",
+              "n": 6,
+              "wins": 6
+            },
+            {
+              "champion": "LeBlanc",
+              "n": 2,
+              "wins": 0
+            },
+            {
+              "champion": "Ahri",
+              "n": 1,
+              "wins": 1
+            },
+            {
+              "champion": "Galio",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "Viper",
+          "role": "bot",
+          "maps": 15,
+          "wins": 11,
+          "kills": 3.6734,
+          "deaths": 2.2556,
+          "assists": 6.9601,
+          "kda": 4.7143,
+          "kp": 0.6818,
+          "dmg": 23600.1887,
+          "gold": 16074.9118,
+          "gpm": 489.1042,
+          "cs": 330.991,
+          "cs15": 148.2,
+          "vspm": 1.7687,
+          "wards_placed": 18.818,
+          "wards_killed": 14.6935,
+          "champions": [
+            {
+              "champion": "Ezreal",
+              "n": 4,
+              "wins": 4
+            },
+            {
+              "champion": "Ashe",
+              "n": 3,
+              "wins": 1
+            },
+            {
+              "champion": "Kai'Sa",
+              "n": 2,
+              "wins": 1
+            },
+            {
+              "champion": "Cassiopeia",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        },
+        {
+          "player": "ON",
+          "role": "sup",
+          "maps": 15,
+          "wins": 11,
+          "kills": 0.4511,
+          "deaths": 3.0934,
+          "assists": 10.6979,
+          "kda": 3.6042,
+          "kp": 0.7149,
+          "dmg": 5634.3231,
+          "gold": 8666.152,
+          "gpm": 263.6812,
+          "cs": 35.896,
+          "cs15": 24.7333,
+          "vspm": 4.1688,
+          "wards_placed": 72.5654,
+          "wards_killed": 12.6957,
+          "champions": [
+            {
+              "champion": "Nautilus",
+              "n": 6,
+              "wins": 6
+            },
+            {
+              "champion": "Seraphine",
+              "n": 3,
+              "wins": 1
+            },
+            {
+              "champion": "Leona",
+              "n": 1,
+              "wins": 1
+            },
+            {
+              "champion": "Lulu",
+              "n": 1,
+              "wins": 1
+            }
+          ],
+          "starter": true
+        }
+      ]
+    }
+  }
+}

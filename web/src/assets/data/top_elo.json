@@ -1,0 +1,96 @@
+{
+  "fecha_corte": "2026-11-09 00:56",
+  "nota": "Elo tras el último mapa del WLDs 2026 (antes de la final).",
+  "teams": [
+    {
+      "rank": 1,
+      "teamname": "Gen.G",
+      "region": "LCK",
+      "elo": 1990.0
+    },
+    {
+      "rank": 2,
+      "teamname": "Bilibili Gaming",
+      "region": "LPL",
+      "elo": 1905.8
+    },
+    {
+      "rank": 3,
+      "teamname": "T1",
+      "region": "LCK",
+      "elo": 1772.7
+    },
+    {
+      "rank": 4,
+      "teamname": "Hanwha Life Esports",
+      "region": "LCK",
+      "elo": 1731.6
+    },
+    {
+      "rank": 5,
+      "teamname": "Invictus Gaming",
+      "region": "LPL",
+      "elo": 1729.6
+    },
+    {
+      "rank": 6,
+      "teamname": "Karmine Corp",
+      "region": "LEC",
+      "elo": 1718.4
+    },
+    {
+      "rank": 7,
+      "teamname": "LYON",
+      "region": "LCS",
+      "elo": 1701.6
+    },
+    {
+      "rank": 8,
+      "teamname": "Dplus Kia",
+      "region": "LCK",
+      "elo": 1689.3
+    },
+    {
+      "rank": 9,
+      "teamname": "Top Esports",
+      "region": "LPL",
+      "elo": 1678.3
+    },
+    {
+      "rank": 10,
+      "teamname": "Team Liquid",
+      "region": "LCS",
+      "elo": 1637.7
+    },
+    {
+      "rank": 11,
+      "teamname": "KT Rolster",
+      "region": "LCK",
+      "elo": 1635.0
+    },
+    {
+      "rank": 12,
+      "teamname": "LØS",
+      "region": "CBLOL",
+      "elo": 1631.4
+    },
+    {
+      "rank": 13,
+      "teamname": "Ninjas in Pyjamas",
+      "region": "LPL",
+      "elo": 1614.6
+    },
+    {
+      "rank": 14,
+      "teamname": "G2 Esports",
+      "region": "LEC",
+      "elo": 1602.1
+    },
+    {
+      "rank": 15,
+      "teamname": "Frank Esports",
+      "region": null,
+      "elo": 1574.0
+    }
+  ]
+}

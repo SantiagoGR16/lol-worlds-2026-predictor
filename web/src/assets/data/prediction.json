@@ -1,0 +1,101 @@
+{
+  "team_a": "Gen.G",
+  "team_b": "Bilibili Gaming",
+  "model": "elo (none)",
+  "adjustment": "day_form",
+  "data_date": "2026-11-09",
+  "generated_at": "2026-11-12 17:44",
+  "p_series_a": 0.6555,
+  "p_series_a_static": 0.7135,
+  "ci": [
+    0.6471,
+    0.6643
+  ],
+  "ci_level": 0.9,
+  "sigma": 0.8386,
+  "n_series_montecarlo": 100000,
+  "scores": [
+    {
+      "score": "3-0",
+      "p": 0.2873
+    },
+    {
+      "score": "3-1",
+      "p": 0.2205
+    },
+    {
+      "score": "3-2",
+      "p": 0.1477
+    },
+    {
+      "score": "2-3",
+      "p": 0.1128
+    },
+    {
+      "score": "1-3",
+      "p": 0.1231
+    },
+    {
+      "score": "0-3",
+      "p": 0.1087
+    }
+  ],
+  "scores_static": [
+    {
+      "score": "3-0",
+      "p": 0.2528
+    },
+    {
+      "score": "3-1",
+      "p": 0.2632
+    },
+    {
+      "score": "3-2",
+      "p": 0.1974
+    },
+    {
+      "score": "2-3",
+      "p": 0.1219
+    },
+    {
+      "score": "1-3",
+      "p": 0.1025
+    },
+    {
+      "score": "0-3",
+      "p": 0.0622
+    }
+  ],
+  "maps": [
+    {
+      "a_blue": true,
+      "a_first_pick": true,
+      "p_a": 0.6587
+    },
+    {
+      "a_blue": true,
+      "a_first_pick": false,
+      "p_a": 0.6587
+    },
+    {
+      "a_blue": false,
+      "a_first_pick": false,
+      "p_a": 0.5774
+    },
+    {
+      "a_blue": false,
+      "a_first_pick": true,
+      "p_a": 0.5774
+    }
+  ],
+  "nota": "Probabilidades por mapa fijas durante la serie salvo la forma del día. Lado del mapa 1 al 50 %; elecciones del perdedor según frecuencias de 2026.",
+  "day_form": {
+    "sigma": 0.8386,
+    "sigma_ci": [
+      0.7386,
+      0.9386
+    ],
+    "p_series_a_raw": 0.7135,
+    "nota": "Forma del día: cada serie recibe un desplazamiento común eps ~ N(0, sigma²) en el logit de todos sus mapas. sigma se ajustó con el marcador de 411 Bo5 reales previos al Mundial 2026 y corrige la sobreconfianza y la falta de barridas del simulador estático. El intervalo corresponde al IC perfilado de sigma."
+  }
+}
