@@ -62,6 +62,10 @@ Cada sección es un punto del mapa: al elegirla, la cámara hace zoom a esa zona
 | **Jugadores** | **Vista Partido** |
 | ![MVP por rol en el Mundial](reports/web/06_jugadores.jpg) | ![Previa de la serie mapa a mapa](reports/web/07_partido.jpg) |
 
+**Dashboard de jugadores (vista Partido).** Promedios reales de cada titular en el Mundial 2026: K/D/A, KP, daño, oro, CS, GPM, visión y wards, más el récord y los objetivos de cada equipo.
+
+![Dashboard de jugadores: marcador de Gen.G y Bilibili Gaming](reports/web/08_dashboard_jugadores.jpg)
+
 ## Uso
 
 **Solo el tablero (Windows):** ejecuta `ver_tablero.bat`.

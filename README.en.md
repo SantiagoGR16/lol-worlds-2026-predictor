@@ -62,6 +62,10 @@ Each section is a point on the map: selecting it zooms the camera into that area
 | **Players** | **Match view** |
 | ![MVP by role at Worlds](reports/web/06_jugadores.jpg) | ![Series preview, map by map](reports/web/07_partido.jpg) |
 
+**Player dashboard (Match view).** Real Worlds 2026 averages for every starter: K/D/A, KP, damage, gold, CS, GPM, vision and wards, plus each team's record and objectives.
+
+![Player dashboard: Gen.G and Bilibili Gaming scoreboards](reports/web/08_dashboard_jugadores.jpg)
+
 ## Usage
 
 **Dashboard only (Windows):** run `ver_tablero.bat`.
