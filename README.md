@@ -6,7 +6,7 @@
 
 Pipeline de machine learning que estima la probabilidad de cada equipo en la final Bo5 del Mundial 2026, con datos reales de Oracle's Elixir, validación temporal sin leakage y simulación Monte Carlo mapa a mapa. Incluye un tablero interactivo en Angular.
 
-![Tablero: mapa completo](reports/web/02_mapa_completo.png)
+[![Recorrido por el tablero](reports/web/demo_mapa.gif)](https://lol-worlds-2026-predictor.vercel.app)
 
 ---
 
@@ -50,9 +50,17 @@ El Elo simple le ganó a LightGBM. Con pocas series internacionales, el modelo c
 
 Angular 22 con navegación sobre un mapa. **Demo:** https://lol-worlds-2026-predictor.vercel.app
 
-| Inicio | Jugadores |
+Cada sección es un punto del mapa: al elegirla, la cámara hace zoom a esa zona y se abre su panel. Se recorre con ← →, `M` vuelve al mapa completo y `F` activa la pantalla completa.
+
+![Mapa completo](reports/web/01_mapa_completo.jpg)
+
+| La final | Marcadores (con forma del día) |
 |---|---|
-| ![Inicio](reports/web/03_poi_nexos.png) | ![Jugadores](reports/web/04_poi_scouting.png) |
+| ![La final: probabilidad de cada equipo](reports/web/02_la_final.jpg) | ![Distribución de marcadores](reports/web/03_marcadores.jpg) |
+| **Mapa a mapa** | **Por qué** |
+| ![P(mapa) según el lado](reports/web/04_mapa_a_mapa.jpg) | ![Qué pesa en la predicción](reports/web/05_por_que.jpg) |
+| **Jugadores** | **Vista Partido** |
+| ![MVP por rol en el Mundial](reports/web/06_jugadores.jpg) | ![Previa de la serie mapa a mapa](reports/web/07_partido.jpg) |
 
 ## Uso
 
