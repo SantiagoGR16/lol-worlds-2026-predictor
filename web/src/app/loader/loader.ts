@@ -1,147 +1,150 @@
-import { Component, computed, inject, output } from '@angular/core';
-import { DATA_FILES, DataService } from '../data/data.service';
-import { EVENT_LABEL } from '../shared/event';
+import { Component, ElementRef, computed, inject, output, signal, viewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { DataService } from '../data/data.service';
 
-/** Pantalla de carga tipo terminal: la barra llega a 100 % cuando los JSON están listos. */
+/** Video de YouTube de la portada: pantalla de inicio de la final del Mundial 2015 (canal oficial de LoL Corea). */
+const VIDEO_ID = '-MBvUX8FWos';
+// youtube-nocookie: no deja cookies de seguimiento hasta que el usuario interactúa con el video.
+const VIDEO_URL =
+  `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}` +
+  '&controls=0&rel=0&playsinline=1&modestbranding=1&iv_load_policy=3&disablekb=1&enablejsapi=1';
+
+/** Portada: video de fondo y el botón para entrar. El botón se activa cuando los JSON ya cargaron. */
 @Component({
   selector: 'app-loader',
   template: `
-    <section class="loader" aria-labelledby="loader-title">
-      <div class="term glass violet">
-        <p class="eyebrow">lolpred · tablero táctico</p>
-        <h1 id="loader-title" class="title">{{ label }}</h1>
-        <ul class="lines mono" aria-live="polite">
-          @for (f of files; track f.file; let i = $index) {
-            <li [style.animation-delay]="i * 90 + 'ms'">
-              <span class="prompt">&gt;</span> cargar {{ f.file }}
-              <span class="st" [class]="'st ' + data.status()[f.file]">{{ data.status()[f.file] }}</span>
-            </li>
-          }
-        </ul>
-        <div
-          class="bar"
-          role="progressbar"
-          aria-label="Carga de datos"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          [attr.aria-valuenow]="percent()"
-        >
-          <div class="fill" [style.width.%]="percent()"></div>
-        </div>
-        <div class="row">
-          <span class="mono pct">{{ percent() }} %</span>
-          @if (data.failed()) {
-            <span class="err">No se pudieron leer todos los datos. Corre scripts/run_pipeline.py.</span>
-          }
-        </div>
-        <button class="enter" type="button" [disabled]="!data.ready()" (click)="enter.emit()">
-          ENTRAR A LA GRIETA
-        </button>
-        <p class="note">Uso personal, no comercial · Proyecto no afiliado a Riot Games ni a los equipos.</p>
+    <section class="intro" aria-label="Portada">
+      <div class="video" aria-hidden="true">
+        <iframe
+          #yt
+          [src]="src"
+          title="Video de portada"
+          tabindex="-1"
+          allow="autoplay; encrypted-media"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </div>
+      <div class="shade" aria-hidden="true"></div>
+
+      <div class="cta">
+        <button class="enter" type="button" [disabled]="!data.ready()" (click)="enter.emit()">
+          @if (data.ready()) {
+            ENTRAR A LA GRIETA
+          } @else {
+            CARGANDO… {{ percent() }} %
+          }
+        </button>
+        @if (data.failed()) {
+          <p class="err">No se pudieron leer todos los datos. Corre scripts/run_pipeline.py.</p>
+        }
+      </div>
+
+      <button class="sound" type="button" (click)="toggleSound()" [attr.aria-pressed]="!muted()"
+              [attr.aria-label]="muted() ? 'Activar sonido del video' : 'Silenciar video'">
+        {{ muted() ? '🔇 Activar sonido' : '🔊 Silenciar' }}
+      </button>
+      <p class="note">Video: League of Legends (Riot Games) · Proyecto no afiliado a Riot Games ni a los equipos.</p>
     </section>
   `,
   styles: `
-    .loader {
+    .intro {
       position: fixed;
       inset: 0;
       z-index: 50;
-      display: grid;
-      place-items: center;
-      padding: 16px;
-    }
-    .term {
-      width: min(560px, 100%);
-      padding: 28px 28px 22px;
-    }
-    .title {
-      font-size: clamp(20px, 3.4vw, 28px);
-      margin: 6px 0 18px;
-      background: linear-gradient(90deg, var(--gold-2), var(--violet-2), var(--cyan-2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .lines {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 18px;
-      font-size: 13px;
-      color: var(--ink-2);
-      li {
-        opacity: 0;
-        animation: type 0.3s ease-out forwards;
-      }
-    }
-    .prompt {
-      color: var(--violet-2);
-    }
-    .st {
-      float: right;
-      &.ok {
-        color: #7ef0a0;
-      }
-      &.error {
-        color: var(--danger);
-      }
-      &.pendiente {
-        color: var(--ink-3);
-      }
-    }
-    .bar {
-      height: 6px;
-      border-radius: 99px;
-      background: rgba(255, 255, 255, 0.07);
       overflow: hidden;
+      background: #05070d;
     }
-    .fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--gold), var(--violet), var(--cyan));
-      box-shadow: 0 0 16px var(--violet);
-      transition: width 0.4s ease;
+    // El iframe cubre toda la pantalla (como background-size: cover) manteniendo 16:9.
+    .video {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: max(100vw, 177.78vh);
+        height: max(56.25vw, 100vh);
+        // Un poco más grande para recortar los bordes y el título que muestra YouTube al empezar.
+        transform: translate(-50%, -50%) scale(1.12);
+        border: 0;
+      }
     }
-    .row {
-      display: flex;
-      gap: 12px;
-      justify-content: space-between;
-      margin: 8px 0 18px;
-      font-size: 12px;
+    .shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(5, 7, 13, 0.92) 0%, rgba(5, 7, 13, 0.35) 32%, transparent 55%),
+        radial-gradient(ellipse at center, transparent 55%, rgba(5, 7, 13, 0.55) 100%);
     }
-    .err {
-      color: var(--danger);
+    .cta {
+      position: absolute;
+      left: 50%;
+      bottom: 13vh;
+      transform: translateX(-50%);
+      width: min(420px, calc(100vw - 32px));
+      text-align: center;
     }
     .enter {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       border-radius: 12px;
       border: 1px solid var(--violet);
-      background: linear-gradient(90deg, rgba(232, 182, 76, 0.18), rgba(157, 123, 255, 0.3), rgba(35, 213, 255, 0.18));
+      background: linear-gradient(90deg, rgba(232, 182, 76, 0.28), rgba(157, 123, 255, 0.4), rgba(35, 213, 255, 0.28));
+      backdrop-filter: blur(6px);
       font-family: var(--f-title);
       font-weight: 700;
-      letter-spacing: 0.18em;
+      font-size: 15px;
+      letter-spacing: 0.2em;
+      color: var(--ink);
       cursor: pointer;
+      box-shadow: 0 0 24px rgba(157, 123, 255, 0.35);
       transition: box-shadow 0.2s, transform 0.2s;
       &:hover:not(:disabled) {
-        box-shadow: 0 0 28px rgba(157, 123, 255, 0.6);
+        box-shadow: 0 0 36px rgba(157, 123, 255, 0.75);
         transform: translateY(-1px);
       }
       &:disabled {
-        opacity: 0.4;
+        opacity: 0.6;
         cursor: progress;
       }
     }
-    .note {
-      margin: 14px 0 0;
-      text-align: center;
+    .err {
+      margin: 10px 0 0;
+      color: var(--danger);
+      font-size: 12.5px;
     }
-    @keyframes type {
-      from {
-        opacity: 0;
-        transform: translateX(-6px);
+    .sound {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(5, 7, 13, 0.6);
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        border-color: var(--glow);
       }
-      to {
-        opacity: 1;
-        transform: none;
+    }
+    .note {
+      position: absolute;
+      left: 16px;
+      bottom: 20px;
+      right: 170px;
+      margin: 0;
+      font-size: 11.5px;
+      color: var(--ink-3);
+    }
+    @media (max-width: 600px) {
+      .note {
+        right: 16px;
+        bottom: 56px;
+        text-align: center;
+      }
+      .cta {
+        bottom: 18vh;
       }
     }
   `,
@@ -149,7 +152,26 @@ import { EVENT_LABEL } from '../shared/event';
 export class LoaderComponent {
   protected readonly data = inject(DataService);
   readonly enter = output<void>();
-  protected readonly label = EVENT_LABEL;
-  protected readonly files = DATA_FILES;
+  // URL fija escrita en el código (no viene del usuario): segura para el iframe.
+  protected readonly src = inject(DomSanitizer).bypassSecurityTrustResourceUrl(VIDEO_URL);
   protected readonly percent = computed(() => Math.round(this.data.progress() * 100));
+  protected readonly muted = signal(true);
+  private readonly yt = viewChild<ElementRef<HTMLIFrameElement>>('yt');
+
+  /** El autoplay solo funciona en silencio; el sonido se activa con un clic (API de iframes de YouTube). */
+  protected toggleSound(): void {
+    const next = !this.muted();
+    const cmd = (func: string, args: unknown[] = []) =>
+      this.yt()?.nativeElement.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func, args }),
+        'https://www.youtube-nocookie.com',
+      );
+    if (next) {
+      cmd('mute');
+    } else {
+      cmd('unMute');
+      cmd('setVolume', [70]);
+    }
+    this.muted.set(next);
+  }
 }
